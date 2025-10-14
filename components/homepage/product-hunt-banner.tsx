@@ -41,7 +41,7 @@ export default function ProductHuntBanner() {
         <p className="text-sm font-medium">
           <Content
             contentKey="product-hunt.announcement"
-            origin="homepage"
+           
           />{' '}
           <Link
             href="https://www.producthunt.com/posts/prdkit?utm_source=prdkit&utm_medium=referral"
@@ -51,7 +51,7 @@ export default function ProductHuntBanner() {
           >
             <Content
               contentKey="product-hunt.announcement-cta"
-              origin="homepage"
+             
             />
           </Link>
         </p>

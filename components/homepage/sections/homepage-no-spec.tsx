@@ -42,10 +42,10 @@ export default function HomepageNoSpec() {
           transition={{ ...defaultTransition, delay: baseDelay }}
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-light text-center lg:text-left">
-            <Content contentKey="no-spec.title" origin="homepage" />
+            <Content contentKey="no-spec.title" />
           </h2>
           <p className="text-lg lg:text-xl font-light text-center lg:text-left max-w-[500px]">
-            <Content contentKey="no-spec.description" origin="homepage" />
+            <Content contentKey="no-spec.description" />
           </p>
         </motion.div>
       </div>

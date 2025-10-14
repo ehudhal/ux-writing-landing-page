@@ -17,12 +17,12 @@ export default function HomepageBetterTime() {
     >
       <div className="lg:max-w-[1024px] max-w-[80%] mx-auto w-full flex flex-col gap-6 lg:gap-10 relative px-4 lg:px-0">
         <h2 className="text-2xl lg:text-5xl font-serif font-light text-center ">
-          <Content contentKey="better-time.title" origin="homepage" />
+          <Content contentKey="better-time.title" />
         </h2>
         <div className="flex flex-col items-center gap-4">
           <SignUpButton>
             <PRDKitButton>
-              <Content contentKey="better-time.cta-text" origin="homepage" />
+              <Content contentKey="better-time.cta-text" />
             </PRDKitButton>
           </SignUpButton>
         </div>

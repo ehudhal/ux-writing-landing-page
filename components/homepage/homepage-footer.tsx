@@ -16,6 +16,17 @@ const links = [
   }
 ]
 
+const variantLinks = [
+  {
+    label: 'PRDKit',
+    href: '/'
+  },
+  {
+    label: 'Chordio',
+    href: '/chordio'
+  }
+]
+
 export default function HomepageFooter({
   className,
   variant = 'full'
@@ -38,17 +49,31 @@ export default function HomepageFooter({
           <div className="flex items-center gap-2">
             <PRDKitLogo color="white" />
           </div>
-          <div className="flex md:flex-row flex-col gap-2 md:gap-0 justify-center items-center space-x-2 lg:space-x-6 text-xs lg:text-sm  ">
-            {links.map(link => (
-              <Link
-                href={link.href}
-                key={link.label}
-                className="text-white hover:black/5"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <span className="text-white text-xs md:text-left text-center ml-4">
+          <div className="flex md:flex-row flex-col gap-4 md:gap-0 justify-center items-center text-xs lg:text-sm">
+            <div className="flex gap-2 items-center">
+              <span className="text-white/50 text-xs">Variants:</span>
+              {variantLinks.map(link => (
+                <Link
+                  href={link.href}
+                  key={link.label}
+                  className="text-white hover:text-white/80 underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex gap-2 md:gap-0 md:space-x-6">
+              {links.map(link => (
+                <Link
+                  href={link.href}
+                  key={link.label}
+                  className="text-white hover:black/5"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <span className="text-white text-xs md:text-left text-center">
               © 2025 Chordio, Inc. All rights reserved.
             </span>
           </div>

@@ -32,12 +32,12 @@ export default function HomepageLeveragePatterns() {
           transition={{ ...defaultTransition, delay: baseDelay + 0.2 }}
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-light text-center lg:text-left">
-            <Content contentKey="leverage-patterns.title" origin="homepage" />
+            <Content contentKey="leverage-patterns.title" />
           </h2>
           <p className="text-lg lg:text-xl font-light text-center lg:text-left max-w-[500px]">
             <Content
               contentKey="leverage-patterns.description"
-              origin="homepage"
+             
             />
           </p>
         </motion.div>

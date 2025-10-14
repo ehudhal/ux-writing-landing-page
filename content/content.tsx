@@ -1,13 +1,16 @@
 import { MemoizedReactMarkdown } from '@/components/markdown'
 import contentAbout from '@/content/library/about.json'
 import contentHomepage from '@/content/library/homepage.json'
+import contentHomepageChordio from '@/content/library/homepage-chordio.json'
 import contentPartnership from '@/content/library/partnership.json'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
+import { useContentOrigin } from './content-origin-context'
 import './markdown-style.css'
 
 const contentMap = {
   homepage: contentHomepage,
+  'homepage-chordio': contentHomepageChordio,
   about: contentAbout,
   partnership: contentPartnership
 }
@@ -18,13 +21,15 @@ type KeyOfContent<T extends object> =
 
 type ContentProps<T extends object> = {
   contentKey: KeyOfContent<T>
-  origin: keyof typeof contentMap
+  origin?: keyof typeof contentMap
 }
 export default function Content<T extends object>({
   contentKey,
   origin
 }: ContentProps<T>) {
-  const content = getContent(contentKey, origin)
+  const contextOrigin = useContentOrigin()
+  const actualOrigin = origin || contextOrigin
+  const content = getContent(contentKey, actualOrigin)
 
   return (
     <MemoizedReactMarkdown

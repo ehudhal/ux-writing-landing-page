@@ -24,7 +24,7 @@
       }
     ],
     "strictNullChecks": true,
-    "types": ["chrome", "node", "jest"]
+    "types": ["node"]
   },
   "ts-node": {
     // these options are overrides used only by ts-node

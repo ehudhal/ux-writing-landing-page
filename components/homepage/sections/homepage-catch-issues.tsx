@@ -25,10 +25,10 @@ export default function HomepageCatchIssues() {
           transition={{ ...defaultTransition, delay: baseDelay }}
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-light text-center lg:text-left">
-            <Content contentKey="catch-issues.title" origin="homepage" />
+            <Content contentKey="catch-issues.title" />
           </h2>
           <p className="text-lg lg:text-xl font-light text-center lg:text-left max-w-[500px]">
-            <Content contentKey="catch-issues.description" origin="homepage" />
+            <Content contentKey="catch-issues.description" />
           </p>
         </motion.div>
         <motion.div

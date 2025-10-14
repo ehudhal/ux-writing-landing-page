@@ -1,6 +1,6 @@
 'use client'
 import Content from '@/content/content'
-import contentHomepage from '@/content/library/homepage.json'
+import { useHomepageContent } from '@/content/content-origin-context'
 import { useIsMobile } from '@/lib/hooks/use-media-query'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -8,6 +8,7 @@ import { defaultTransition, fadeInUpVariants } from '../animations'
 
 export default function HomepageUltimatePRD() {
   const isMobile = useIsMobile()
+  const contentHomepage = useHomepageContent()
   const chatCard = contentHomepage['ultimate-prd']['chat-card']
   const prdCard = contentHomepage['ultimate-prd']['prd-card']
 
@@ -23,10 +24,10 @@ export default function HomepageUltimatePRD() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full flex flex-col gap-6 lg:gap-16 relative px-4 lg:px-0">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center ">
-            <Content contentKey="ultimate-prd.title" origin="homepage" />
+            <Content contentKey="ultimate-prd.title" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            <Content contentKey="ultimate-prd.subtitle" origin="homepage" />
+            <Content contentKey="ultimate-prd.subtitle" />
           </p>
         </div>
         <div className=" bg-white rounded-2xl flex flex-col lg:flex-row gap-4 p-6 border-[#DEDEDB] border z-[20]">
@@ -34,7 +35,7 @@ export default function HomepageUltimatePRD() {
             <h4 className="text-xl font-serif font-light">
               <Content
                 contentKey="ultimate-prd.chat-card.title"
-                origin="homepage"
+               
               />
             </h4>
             <Image
@@ -49,7 +50,7 @@ export default function HomepageUltimatePRD() {
             <h4 className="text-xl font-serif font-light">
               <Content
                 contentKey="ultimate-prd.prd-card.title"
-                origin="homepage"
+               
               />
             </h4>
             <Image

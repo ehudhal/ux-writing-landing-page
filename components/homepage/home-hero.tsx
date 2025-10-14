@@ -22,8 +22,8 @@ export default function HomeHero() {
         submitOnFileUpload={true}
         autoFocus={false}
         className="lg:pt-28  pt-8"
-        title={<Content contentKey="hero.title" origin="homepage" />}
-        subtitle={<Content contentKey="hero.subtitle" origin="homepage" />}
+        title={<Content contentKey="hero.title" />}
+        subtitle={<Content contentKey="hero.subtitle" />}
         chatButtonsContainerClassName="bottom-3 items-end"
         sendButtonVariant="fancy"
       ></InitialChatView>

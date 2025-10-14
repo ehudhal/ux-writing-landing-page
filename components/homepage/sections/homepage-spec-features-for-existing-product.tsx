@@ -1,6 +1,6 @@
 'use client'
 import Content from '@/content/content'
-import contentHomepage from '@/content/library/homepage.json'
+import { useHomepageContent } from '@/content/content-origin-context'
 import { fadeInUpVariants } from '../animations'
 
 import { useIsMobile, useIsTablet } from '@/lib/hooks/use-media-query'
@@ -13,6 +13,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
   const isTablet = useIsTablet()
   const isMobile = useIsMobile()
   const isDesktop = !isMobile && !isTablet
+  const contentHomepage = useHomepageContent()
   const specFeatures = contentHomepage['spec-features']
   return (
     <motion.section
@@ -26,10 +27,10 @@ export default function HomepageSpecFeaturesForExistingProduct() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full items-center flex flex-col gap-6 lg:gap-12 relative px-4 ">
         <div className="flex flex-col items-center gap-4 mb-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center lg:max-w-[800px]">
-            <Content contentKey="spec-features.title" origin="homepage" />
+            <Content contentKey="spec-features.title" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            <Content contentKey="spec-features.subtitle" origin="homepage" />
+            <Content contentKey="spec-features.subtitle" />
           </p>
         </div>
         <div className="flex flex-col gap-4 w-full">
@@ -110,14 +111,14 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                   <h3 className="text-[22px] lg:text-3xl font-serif font-light">
                     <Content
                       contentKey="spec-features.knowledge-hub.title"
-                      origin="homepage"
+                     
                     />
                   </h3>
                 </div>
                 <p className="max-w-[400px]">
                   <Content
                     contentKey="spec-features.knowledge-hub.description"
-                    origin="homepage"
+                   
                   />
                 </p>
                 <Image
@@ -175,11 +176,11 @@ const SpecFeatureCard = ({
           {icon}
         </div>
         <h3 className="text-[22px] lg:text-3xl font-serif font-light">
-          <Content contentKey={`${contentKey}.title`} origin="homepage" />
+          <Content contentKey={`${contentKey}.title`} />
         </h3>
       </div>
       <p className="text-sm lg:text-base">
-        <Content contentKey={`${contentKey}.description`} origin="homepage" />
+        <Content contentKey={`${contentKey}.description`} />
       </p>
       {children}
       <svg

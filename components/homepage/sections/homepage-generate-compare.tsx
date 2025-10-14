@@ -31,12 +31,12 @@ export default function HomepageGenerateCompare() {
           transition={{ ...defaultTransition, delay: baseDelay }}
         >
           <h2 className="text-4xl lg:text-5xl font-serif font-light text-center lg:text-left">
-            <Content contentKey="generate-compare.title" origin="homepage" />
+            <Content contentKey="generate-compare.title" />
           </h2>
           <p className="text-lg lg:text-xl font-light text-center lg:text-left lg:max-w-[500px] ">
             <Content
               contentKey="generate-compare.description"
-              origin="homepage"
+             
             />
           </p>
         </motion.div>

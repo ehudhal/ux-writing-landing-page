@@ -32,7 +32,7 @@ export default function HomepageDesignOps() {
           viewport={{ once: true }}
           transition={{ ...defaultTransition, delay: baseDelay }}
         >
-          <Content contentKey="design-ops.title" origin="homepage" />
+          <Content contentKey="design-ops.title" />
         </motion.h2>
         <div className="flex gap-4 lg:gap-6 w-full flex-col justify-start">
           {(contentHomepage['design-ops'].sections as Section[]).map(
@@ -53,7 +53,7 @@ export default function HomepageDesignOps() {
                   <h3 className="text-3xl lg:text-4xl font-light font-serif">
                     <Content
                       contentKey={`design-ops.sections.${index}.title`}
-                      origin="homepage"
+                     
                     />
                   </h3>
                   <ul className="text-base lg:text-lg font-light list-disc ml-6 flex flex-col gap-4 max-w-[400px]">
@@ -61,7 +61,7 @@ export default function HomepageDesignOps() {
                       <li key={pointIndex}>
                         <Content
                           contentKey={`design-ops.sections.${index}.points.${pointIndex}`}
-                          origin="homepage"
+                         
                         />
                       </li>
                     ))}
@@ -124,7 +124,7 @@ export default function HomepageDesignOps() {
             transition={{ ...defaultTransition, delay: baseDelay + 0.8 }}
           >
             <h5 className="text-xl lg:text-2xl font-light font-serif text-center">
-              <Content contentKey="design-ops.cta.title" origin="homepage" />
+              <Content contentKey="design-ops.cta.title" />
             </h5>
 
             <Button
@@ -134,7 +134,7 @@ export default function HomepageDesignOps() {
               <Link href="mailto:hello@chordio.com">
                 <Content
                   contentKey="design-ops.cta.button-text"
-                  origin="homepage"
+                 
                 />
               </Link>
             </Button>

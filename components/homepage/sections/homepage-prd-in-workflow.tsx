@@ -21,10 +21,10 @@ export default function HomepagePRDInWorkflow() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full items-center flex flex-col gap-6 lg:gap-12 relative px-4 lg:px-0">
         <div className="flex flex-col items-center gap-4 mb-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center max-w-[800px]">
-            <Content contentKey="prd-in-workflow.title" origin="homepage" />
+            <Content contentKey="prd-in-workflow.title" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            <Content contentKey="prd-in-workflow.subtitle" origin="homepage" />
+            <Content contentKey="prd-in-workflow.subtitle" />
           </p>
         </div>
         <div className="bg-white max-w-full w-full lg:max-w-[1000px] rounded-3xl p-6 lg:p-4 lg:pl-16 flex flex-col lg:flex-row items-center justify-center">
@@ -32,19 +32,19 @@ export default function HomepagePRDInWorkflow() {
             <h4 className="text-2xl lg:text-4xl font-serif font-light">
               <Content
                 contentKey="prd-in-workflow.live-prototyping.title"
-                origin="homepage"
+               
               />
             </h4>
             <h6 className="text-base lg:text-lg font-medium">
               <Content
                 contentKey="prd-in-workflow.live-prototyping.subtitle"
-                origin="homepage"
+               
               />
             </h6>
             <p className="text-sm lg:text-base">
               <Content
                 contentKey="prd-in-workflow.live-prototyping.description"
-                origin="homepage"
+               
               />
             </p>
           </div>
@@ -83,19 +83,19 @@ export default function HomepagePRDInWorkflow() {
             <h4 className="text-2xl lg:text-4xl font-serif font-light max-w-[200px]">
               <Content
                 contentKey="prd-in-workflow.share-with-team.title"
-                origin="homepage"
+               
               />
             </h4>
             <h6 className="text-base lg:text-lg font-medium">
               <Content
                 contentKey="prd-in-workflow.share-with-team.subtitle"
-                origin="homepage"
+               
               />
             </h6>
             <p className="text-sm lg:text-base">
               <Content
                 contentKey="prd-in-workflow.share-with-team.description"
-                origin="homepage"
+               
               />
             </p>
           </div>

@@ -1,0 +1,142 @@
+{
+  "hero": {
+    "title": "Review your interface copy like a UX writer would",
+    "subtitle": "Make every word work for your users. Chordio reviews your interface copy for clarity, consistency, and tone.",
+    "cta-text": "Start Reviewing for Free",
+    "yc-badge": "Backed by Combinator"
+  },
+  "ultimate-prd": {
+    "title": "Great UX writing makes products feel effortless",
+    "subtitle": "Every word on a button, tooltip, or error message shapes how users move through your product",
+    "chat-card": {
+      "title": "Review copy in context",
+      "image": "/marketing/homepage/chat-with-prdkit-ai.webp",
+      "image-mobile": "/marketing/homepage/chat-with-prdkit-ai-mobile.webp"
+    },
+    "prd-card": {
+      "title": "Get actionable feedback",
+      "image": "/marketing/homepage/bike-service-pro.webp",
+      "image-mobile": "/marketing/homepage/bike-service-pro-mobile.webp"
+    }
+  },
+  "enhanced-prd-clarity": {
+    "title": "Check your copy against proven UX writing principles",
+    "subtitle": "Chordio checks your designs against proven UX writing principles, helping you spot unclear phrasing, tone mismatches, and moments that break user flow.",
+    "wireframes": {
+      "title": "Clarity",
+      "description": "Write like you speak. Users shouldn't need to think twice. Catch phrases like 'Re-compute settings' that leave users unsure what happens next.",
+      "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
+      "icon-color": "#51A1E1",
+      "bg-color": "#D1EDF3"
+    },
+    "user-flows": {
+      "title": "Conciseness",
+      "description": "Keep it short. Every word should earn its place. Identify long tooltips or help text that explain more than they need to.",
+      "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
+      "icon-color": "#7A4EA1",
+      "bg-color": "#EDE9F0"
+    },
+    "social-posts": {
+      "title": "Consistency",
+      "description": "Use the same terms and tone across screens. Spot when 'Delete' on one screen becomes 'Remove' on another — users hesitate.",
+      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon-color": "#E1C151",
+      "bg-color": "#F3ECD1"
+    },
+    "simulated-reviews": {
+      "title": "Empathy",
+      "description": "Anticipate confusion. Offer guidance, not blame. Transform 'You entered the wrong code' into 'That code didn't work. Try again.'",
+      "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
+      "icon-color": "#22C397",
+      "bg-color": "#C4F3E6"
+    },
+    "press-release": {
+      "title": "Action Orientation",
+      "description": "Help users know what to do next. Replace vague buttons like 'Proceed' with clear ones like 'Save and continue'.",
+      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon-color": "#ED5F5F",
+      "bg-color": "#FCE4E4"
+    },
+    "demo-scripts": {
+      "title": "Accessibility",
+      "description": "Use language that everyone can understand. Avoid overly complex instructions or insider jargon that exclude users.",
+      "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
+      "icon-color": "#22C397",
+      "bg-color": "#D6F5DF"
+    }
+  },
+  "prd-in-workflow": {
+    "title": "Review copy where it lives",
+    "subtitle": "Works directly in your design and development workflow",
+    "live-prototyping": {
+      "title": "Review in Figma",
+      "subtitle": "Design integration",
+      "description": "Select any frame in Figma and get instant UX writing feedback. See which principles pass, which fail, and what to improve."
+    },
+    "share-with-team": {
+      "title": "Review live web pages",
+      "subtitle": "Browser extension",
+      "description": "Open any web page and review the copy in context. Perfect for QA processes and ongoing content audits."
+    }
+  },
+  "spec-features": {
+    "title": "Why teams struggle with UX writing",
+    "subtitle": "If your interface copy feels inconsistent or confusing, it's often not because the writers aren't good. It's because the process isn't built to support good writing.",
+    "automated-context": {
+      "title": "Copy written too late",
+      "description": "Microcopy is often added after design decisions are made. Chordio brings writing into the design process, so you can catch and fix wording issues early.",
+      "image": "/marketing/homepage/automated-context-gathering.webp",
+      "icon-color": "#51A1E1",
+      "bg-color": "#D9ECF2"
+    },
+    "product-screen-analysis": {
+      "title": "No shared guardrails",
+      "description": "Tone and terminology drift across products and features. Chordio applies consistent rules for language, tone, and voice across your product.",
+      "image": "/marketing/homepage/product-screen-analysis.webp",
+      "icon-color": "#319B6B",
+      "bg-color": "#E3F8E9"
+    },
+    "knowledge-hub": {
+      "title": "Context gets lost",
+      "description": "Copy is reviewed in docs or spreadsheets, not inside the design. Chordio reviews words where they appear — inside Figma frames or live web pages.",
+      "image": "/marketing/homepage/knowledge-hub.webp",
+      "icon-color": "#7A4EA1",
+      "bg-color": "#EDE9F0"
+    }
+  },
+  "works-where": {
+    "title": "Available in your workspace",
+    "subtitle": "Use Chordio wherever you design and build. In Figma, in the browser, or on the web.",
+    "slack": {
+      "title": "Figma",
+      "description": "Add Chordio to Figma for seamless design review integration",
+      "bg-color": "#F6E7A5"
+    },
+    "teams": {
+      "title": "Browser",
+      "description": "Review live web pages with the browser extension",
+      "bg-color": "#E7DDF4"
+    },
+    "web": {
+      "title": "Web app",
+      "description": "Access Chordio from any browser, anywhere",
+      "bg-color": "#C8F5E9",
+      "icon-color": "#319B6B"
+    }
+  },
+  "secondary-cta": {
+    "title": "Bring clarity to every interface message",
+    "subtitle": "See your design through the eyes of a UX writer. Open any frame or web page, review the copy, and uncover the fixes that improve user understanding.",
+    "cta-text": "Try Chordio"
+  },
+  "product-hunt": {
+    "announcement": "🚀 We're live on Product Hunt, and we'd love your support!",
+    "announcement-cta": "Check out the announcement →",
+    "welcome": "👋 Welcome, Product Hunters! Try Chordio free. No credit card required. No lengthy setup."
+  },
+  "privacy": {
+    "title": "Your data is safe",
+    "subtitle": "We never use your data to train public AI models.",
+    "link-text": "Learn more"
+  }
+}

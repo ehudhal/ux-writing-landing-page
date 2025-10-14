@@ -26,16 +26,16 @@ export default function HomepagePrivacy() {
           className=" block h-24 w-auto lg:hidden"
         />
         <h2 className="text-left font-serif text-3xl font-light lg:text-4xl">
-          <Content contentKey="privacy.title" origin="homepage" />
+          <Content contentKey="privacy.title" />
         </h2>
         <div className="text-left text-base">
-          <Content contentKey="privacy.subtitle" origin="homepage" />
+          <Content contentKey="privacy.subtitle" />
           <br />
           <Link
             href="/privacy"
             className="cursor-pointer text-left text-base underline"
           >
-            <Content contentKey="privacy.link-text" origin="homepage" />
+            <Content contentKey="privacy.link-text" />
           </Link>
         </div>
         <Image

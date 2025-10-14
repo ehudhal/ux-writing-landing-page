@@ -1,6 +1,6 @@
 'use client'
 import Content from '@/content/content'
-import contentHomepage from '@/content/library/homepage.json'
+import { useHomepageContent } from '@/content/content-origin-context'
 import { fadeInUpVariants } from '../animations'
 
 import { motion } from 'framer-motion'
@@ -16,6 +16,7 @@ import Image from 'next/image'
 import { defaultTransition } from '../animations'
 
 export default function HomepageEnhancedPRDClarity() {
+  const contentHomepage = useHomepageContent()
   const clarityContent = contentHomepage['enhanced-prd-clarity']
   return (
     <motion.section
@@ -32,13 +33,13 @@ export default function HomepageEnhancedPRDClarity() {
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center ">
             <Content
               contentKey="enhanced-prd-clarity.title"
-              origin="homepage"
+             
             />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
             <Content
               contentKey="enhanced-prd-clarity.subtitle"
-              origin="homepage"
+             
             />
           </p>
         </div>
@@ -170,7 +171,7 @@ export const EnhancedPRDClarityCard = ({
     <div className="bg-offwhite relative rounded-2xl p-8 flex flex-col gap-4 min-h-[400px] lg:min-h-[450px] overflow-clip">
       <div className="flex items-center justify-between">
         <h3 className="text-xl lg:text-3xl font-serif font-light">
-          <Content contentKey={`${contentKey}.title`} origin="homepage" />
+          <Content contentKey={`${contentKey}.title`} />
         </h3>
         <div
           className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min`}
@@ -180,7 +181,7 @@ export const EnhancedPRDClarityCard = ({
         </div>
       </div>
       <p className="text-sm lg:text-base">
-        <Content contentKey={`${contentKey}.description`} origin="homepage" />
+        <Content contentKey={`${contentKey}.description`} />
       </p>
       {image && !children && (
         <Image
@@ -194,7 +195,7 @@ export const EnhancedPRDClarityCard = ({
       {children}
       {soon && (
         <span className="absolute bottom-2 right-2 z-40 bg-white rounded-full px-6 py-2 border border-offblack/10 text-sm lg:text-base text-offblack/50">
-          <Content contentKey={`${contentKey}.badge`} origin="homepage" />
+          <Content contentKey={`${contentKey}.badge`} />
         </span>
       )}
       <svg
