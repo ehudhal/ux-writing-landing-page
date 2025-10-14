@@ -1,5 +1,6 @@
 'use client'
 import Content from '@/content/content'
+import contentHomepage from '@/content/library/homepage.json'
 import { fadeInUpVariants } from '../animations'
 
 import { motion } from 'framer-motion'
@@ -13,7 +14,9 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import { defaultTransition } from '../animations'
+
 export default function HomepageEnhancedPRDClarity() {
+  const clarityContent = contentHomepage['enhanced-prd-clarity']
   return (
     <motion.section
       className="bg-white py-24 lg:px-8 lg:py-32 relative "
@@ -44,96 +47,79 @@ export default function HomepageEnhancedPRDClarity() {
             contentKey="enhanced-prd-clarity.wireframes"
             icon={
               <PenTool
-                className="size-4 lg:size-6 text-[#51A1E1]"
+                className="size-4 lg:size-6"
                 strokeWidth={1}
+                style={{ color: clarityContent.wireframes['icon-color'] }}
               />
             }
-            color="#D1EDF3"
-          >
-            <Image
-              src="/marketing/homepage/enhanced-prd-wireframes.webp"
-              alt="Wireframes"
-              width={368}
-              height={217}
-              className="z-20 absolute bottom-[-30px] lg:bottom-[-55px] left-1/2 h-auto w-[clamp(200px,280px,80%)] object-contain -translate-x-1/2 shadow-lg"
-            />
-          </EnhancedPRDClarityCard>
+            color={clarityContent.wireframes['bg-color']}
+            image={clarityContent.wireframes.image}
+            imageClassName="z-20 absolute bottom-[-30px] lg:bottom-[-55px] left-1/2 h-auto w-[clamp(200px,280px,80%)] object-contain -translate-x-1/2 shadow-lg"
+          />
           <EnhancedPRDClarityCard
             contentKey="enhanced-prd-clarity.user-flows"
             icon={
               <LayoutGrid
-                className="size-4 lg:size-6 text-[#7A4EA1]"
+                className="size-4 lg:size-6"
                 strokeWidth={1}
+                style={{ color: clarityContent['user-flows']['icon-color'] }}
               />
             }
-            color="#EDE9F0"
-          >
-            <Image
-              src="/marketing/homepage/enhanced-prd-user-flows.webp"
-              alt="User flows"
-              width={368}
-              height={217}
-              className="z-20 absolute bottom-[-5px] left-1/2 -translate-x-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain  shadow-lg"
-            />
-          </EnhancedPRDClarityCard>
+            color={clarityContent['user-flows']['bg-color']}
+            image={clarityContent['user-flows'].image}
+            imageClassName="z-20 absolute bottom-[-5px] left-1/2 -translate-x-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain  shadow-lg"
+          />
           <EnhancedPRDClarityCard
             contentKey="enhanced-prd-clarity.social-posts"
             icon={
               <Share2
-                className="size-4 lg:size-6 text-[#E1C151]"
+                className="size-4 lg:size-6"
                 strokeWidth={1}
+                style={{ color: clarityContent['social-posts']['icon-color'] }}
               />
             }
-            color="#F3ECD1"
-          >
-            <Image
-              src="/marketing/homepage/enhanced-prd-press-release-01.webp"
-              alt="Social posts"
-              width={368}
-              height={217}
-              className="z-20 absolute bottom-[-15%] left-1/2  h-auto w-[clamp(200px,230px,55%)] object-contain -translate-x-1/2 shadow-lg"
-            />
-          </EnhancedPRDClarityCard>
+            color={clarityContent['social-posts']['bg-color']}
+            image={clarityContent['social-posts'].image}
+            imageClassName="z-20 absolute bottom-[-15%] left-1/2  h-auto w-[clamp(200px,230px,55%)] object-contain -translate-x-1/2 shadow-lg"
+          />
           <EnhancedPRDClarityCard
             contentKey="enhanced-prd-clarity.simulated-reviews"
             soon
             icon={
               <Users2
-                className="size-4 lg:size-6 text-[#22C397]"
+                className="size-4 lg:size-6"
                 strokeWidth={1}
+                style={{
+                  color: clarityContent['simulated-reviews']['icon-color']
+                }}
               />
             }
-            color="#C4F3E6"
-          >
-            <Image
-              src="/marketing/homepage/enhanced-prd-simulated-reviews.webp"
-              alt="Simulated reviews"
-              width={368}
-              height={217}
-              className="z-20 absolute  bottom-[-20px] lg:bottom-[-40px] left-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain -translate-x-1/2 shadow-lg"
-            />
-          </EnhancedPRDClarityCard>
+            color={clarityContent['simulated-reviews']['bg-color']}
+            image={clarityContent['simulated-reviews'].image}
+            imageClassName="z-20 absolute  bottom-[-20px] lg:bottom-[-40px] left-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain -translate-x-1/2 shadow-lg"
+          />
           <EnhancedPRDClarityCard
             contentKey="enhanced-prd-clarity.press-release"
             soon
             icon={
               <FileText
-                className="size-4 lg:size-6 text-[#ED5F5F]"
+                className="size-4 lg:size-6"
                 strokeWidth={1}
+                style={{ color: clarityContent['press-release']['icon-color'] }}
               />
             }
-            color="#FCE4E4"
+            color={clarityContent['press-release']['bg-color']}
           >
             <div className="z-20 absolute bottom-[-40px] left-1/2 -translate-x-1/2 lg:w-[clamp(100px,200px,50%)]  w-[clamp(100px,200px,70%)] ">
               <Image
-                src="/marketing/homepage/enhanced-prd-press-release-01.webp"
+                src={clarityContent['press-release'].image}
                 alt="Press release"
                 width={368}
                 height={217}
                 className="absolute bottom-0 left-0 translate-x-[-20%] translate-y-0 shadow-lg"
               />
               <Image
-                src="/marketing/homepage/enhanced-prd-press-release-01.webp"
+                src={clarityContent['press-release'].image}
                 alt="Press release"
                 width={368}
                 height={217}
@@ -146,20 +132,15 @@ export default function HomepageEnhancedPRDClarity() {
             soon
             icon={
               <PlayCircle
-                className="size-4 lg:size-6 text-[#22C397]"
+                className="size-4 lg:size-6"
                 strokeWidth={1}
+                style={{ color: clarityContent['demo-scripts']['icon-color'] }}
               />
             }
-            color="#D6F5DF"
-          >
-            <Image
-              src="/marketing/homepage/enhanced-prd-demo-briefs.webp"
-              alt="Demo scripts"
-              width={1220}
-              height={1141}
-              className="z-20 absolute bottom-[-5%] left-1/2  h-auto w-[clamp(200px,250px,80%)] object-contain -translate-x-1/2 shadow-lg"
-            />
-          </EnhancedPRDClarityCard>
+            color={clarityContent['demo-scripts']['bg-color']}
+            image={clarityContent['demo-scripts'].image}
+            imageClassName="z-20 absolute bottom-[-5%] left-1/2  h-auto w-[clamp(200px,250px,80%)] object-contain -translate-x-1/2 shadow-lg"
+          />
         </div>
       </div>
     </motion.section>
@@ -170,6 +151,8 @@ type EnhancedPRDClarityCardProps = {
   contentKey: string
   icon: React.ReactNode
   color: string
+  image?: string
+  imageClassName?: string
   children?: React.ReactNode
   soon?: boolean
 }
@@ -178,6 +161,8 @@ export const EnhancedPRDClarityCard = ({
   contentKey,
   icon,
   color,
+  image,
+  imageClassName,
   children,
   soon = false
 }: EnhancedPRDClarityCardProps) => {
@@ -197,6 +182,15 @@ export const EnhancedPRDClarityCard = ({
       <p className="text-sm lg:text-base">
         <Content contentKey={`${contentKey}.description`} origin="homepage" />
       </p>
+      {image && !children && (
+        <Image
+          src={image}
+          alt={contentKey}
+          width={368}
+          height={217}
+          className={imageClassName}
+        />
+      )}
       {children}
       {soon && (
         <span className="absolute bottom-2 right-2 z-40 bg-white rounded-full px-6 py-2 border border-offblack/10 text-sm lg:text-base text-offblack/50">

@@ -1,5 +1,6 @@
 'use client'
 import Content from '@/content/content'
+import contentHomepage from '@/content/library/homepage.json'
 import { useIsMobile } from '@/lib/hooks/use-media-query'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -7,6 +8,8 @@ import { defaultTransition, fadeInUpVariants } from '../animations'
 
 export default function HomepageUltimatePRD() {
   const isMobile = useIsMobile()
+  const chatCard = contentHomepage['ultimate-prd']['chat-card']
+  const prdCard = contentHomepage['ultimate-prd']['prd-card']
 
   return (
     <motion.section
@@ -30,17 +33,13 @@ export default function HomepageUltimatePRD() {
           <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
             <h4 className="text-xl font-serif font-light">
               <Content
-                contentKey="ultimate-prd.chat-card-title"
+                contentKey="ultimate-prd.chat-card.title"
                 origin="homepage"
               />
             </h4>
             <Image
-              src={
-                isMobile
-                  ? '/marketing/homepage/chat-with-prdkit-ai-mobile.webp'
-                  : '/marketing/homepage/chat-with-prdkit-ai.webp'
-              }
-              alt="Chat with PRDKit AI"
+              src={isMobile ? chatCard['image-mobile'] : chatCard.image}
+              alt={chatCard.title}
               className="w-full h-full object-cover rounded-2xl"
               width={1106}
               height={680}
@@ -49,17 +48,13 @@ export default function HomepageUltimatePRD() {
           <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
             <h4 className="text-xl font-serif font-light">
               <Content
-                contentKey="ultimate-prd.prd-card-title"
+                contentKey="ultimate-prd.prd-card.title"
                 origin="homepage"
               />
             </h4>
             <Image
-              src={
-                isMobile
-                  ? '/marketing/homepage/bike-service-pro-mobile.webp'
-                  : '/marketing/homepage/bike-service-pro.webp'
-              }
-              alt="Bike Service Pro Brief"
+              src={isMobile ? prdCard['image-mobile'] : prdCard.image}
+              alt={prdCard.title}
               width={1106}
               className="w-full h-full object-cover rounded-2xl"
               height={680}

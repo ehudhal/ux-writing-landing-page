@@ -8,37 +8,63 @@
   "ultimate-prd": {
     "title": "Create the ultimate PRD in minutes",
     "subtitle": "From conversation to comprehensive product documentation in just a few clicks",
-    "chat-card-title": "Chat with PRDKit AI",
-    "prd-card-title": "Get a structured PRD"
+    "chat-card": {
+      "title": "Chat with PRDKit AI",
+      "image": "/marketing/homepage/chat-with-prdkit-ai.webp",
+      "image-mobile": "/marketing/homepage/chat-with-prdkit-ai-mobile.webp"
+    },
+    "prd-card": {
+      "title": "Get a structured PRD",
+      "image": "/marketing/homepage/bike-service-pro.webp",
+      "image-mobile": "/marketing/homepage/bike-service-pro-mobile.webp"
+    }
   },
   "enhanced-prd-clarity": {
     "title": "Enhance PRD clarity with complementary content",
     "subtitle": "Drive alignment across cross-functional teams with PRD-based generated artifacts.",
     "wireframes": {
       "title": "Wireframes",
-      "description": "See how your product would look like with visual aids to fine-tune the design before committing resources"
+      "description": "See how your product would look like with visual aids to fine-tune the design before committing resources",
+      "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
+      "icon-color": "#51A1E1",
+      "bg-color": "#D1EDF3"
     },
     "user-flows": {
       "title": "User flows",
-      "description": "Create clear user flow diagrams that illustrate how users will navigate through your product"
+      "description": "Create clear user flow diagrams that illustrate how users will navigate through your product",
+      "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
+      "icon-color": "#7A4EA1",
+      "bg-color": "#EDE9F0"
     },
     "social-posts": {
       "title": "Social posts",
-      "description": "Create social media announcements to build anticipation for your product launch"
+      "description": "Create social media announcements to build anticipation for your product launch",
+      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon-color": "#E1C151",
+      "bg-color": "#F3ECD1"
     },
     "simulated-reviews": {
       "title": "Simulated reviews",
       "description": "Evaluate how well your product resonates with users using AI simulated product reviews based on your PRD",
+      "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
+      "icon-color": "#22C397",
+      "bg-color": "#C4F3E6",
       "badge": "Soon"
     },
     "press-release": {
       "title": "Press release",
       "description": "Create compelling future press releases that help align your team on the end vision",
+      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon-color": "#ED5F5F",
+      "bg-color": "#FCE4E4",
       "badge": "Soon"
     },
     "demo-scripts": {
       "title": "Demo scripts",
       "description": "Generate detailed demo scripts that showcase your product's value proposition",
+      "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
+      "icon-color": "#22C397",
+      "bg-color": "#D6F5DF",
       "badge": "Soon"
     }
   },
@@ -61,15 +87,24 @@
     "subtitle": "PRDKit automatically gathers the context to support iterating on enterprise-scale products.",
     "automated-context": {
       "title": "Automated context gathering",
-      "description": "Paste your homepage URL, and PRDKit automatically gathers insights about your product, audience, and business objectives"
+      "description": "Paste your homepage URL, and PRDKit automatically gathers insights about your product, audience, and business objectives",
+      "image": "/marketing/homepage/automated-context-gathering.webp",
+      "icon-color": "#51A1E1",
+      "bg-color": "#D9ECF2"
     },
     "product-screen-analysis": {
       "title": "Product Screen Analysis",
-      "description": "Upload your product screens, and PRDKit intelligently maps user flows, functionality, and interface elements"
+      "description": "Upload your product screens, and PRDKit intelligently maps user flows, functionality, and interface elements",
+      "image": "/marketing/homepage/product-screen-analysis.webp",
+      "icon-color": "#319B6B",
+      "bg-color": "#E3F8E9"
     },
     "knowledge-hub": {
       "title": "Knowledge Hub",
-      "description": "Build comprehensive product knowledge with automatically generated personas, user journeys, and business objectives"
+      "description": "Build comprehensive product knowledge with automatically generated personas, user journeys, and business objectives",
+      "image": "/marketing/homepage/knowledge-hub.webp",
+      "icon-color": "#7A4EA1",
+      "bg-color": "#EDE9F0"
     }
   },
   "works-where": {
@@ -77,16 +112,20 @@
     "subtitle": "Chat with PRDKit where inspiration strikes you. In Slack, on your mobile, or on the web.",
     "slack": {
       "title": "Slack",
-      "description": "Integrate PRDKit directly into your team's Slack workspace"
+      "description": "Integrate PRDKit directly into your team's Slack workspace",
+      "bg-color": "#F6E7A5"
     },
     "teams": {
       "title": "Teams",
       "description": "Coming soon to \nMicrosoft Teams",
+      "bg-color": "#E7DDF4",
       "badge": "Soon"
     },
     "web": {
       "title": "Web app",
-      "description": "Access PRDKit from any browser, anywhere"
+      "description": "Access PRDKit from any browser, anywhere",
+      "bg-color": "#C8F5E9",
+      "icon-color": "#319B6B"
     }
   },
   "secondary-cta": {

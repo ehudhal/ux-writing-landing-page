@@ -1,5 +1,6 @@
 'use client'
 import Content from '@/content/content'
+import contentHomepage from '@/content/library/homepage.json'
 import { fadeInUpVariants } from '../animations'
 
 import { useIsMobile, useIsTablet } from '@/lib/hooks/use-media-query'
@@ -12,6 +13,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
   const isTablet = useIsTablet()
   const isMobile = useIsMobile()
   const isDesktop = !isMobile && !isTablet
+  const specFeatures = contentHomepage['spec-features']
   return (
     <motion.section
       className="bg-white py-24 lg:py-32 relative "
@@ -38,13 +40,13 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                 <Globe
                   className="size-4 lg:size-6"
                   strokeWidth={1}
-                  style={{ color: '#51A1E1' }}
+                  style={{ color: specFeatures['automated-context']['icon-color'] }}
                 />
               }
-              bgColor="#D9ECF2"
+              bgColor={specFeatures['automated-context']['bg-color']}
             >
               <Image
-                src="/marketing/homepage/automated-context-gathering.webp"
+                src={specFeatures['automated-context'].image}
                 alt="Automated Context Gathering"
                 width={1588}
                 height={993}
@@ -57,13 +59,13 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                 <Globe
                   className="size-4 lg:size-6"
                   strokeWidth={1}
-                  style={{ color: '#319B6B' }}
+                  style={{ color: specFeatures['product-screen-analysis']['icon-color'] }}
                 />
               }
-              bgColor="#E3F8E9"
+              bgColor={specFeatures['product-screen-analysis']['bg-color']}
             >
               <Image
-                src="/marketing/homepage/product-screen-analysis.webp"
+                src={specFeatures['product-screen-analysis'].image}
                 alt="Product Screen Analysis"
                 width={1708}
                 height={1113}
@@ -77,13 +79,13 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                   <Notebook
                     className="size-4 lg:size-6"
                     strokeWidth={1}
-                    style={{ color: '#7A4EA1' }}
+                    style={{ color: specFeatures['knowledge-hub']['icon-color'] }}
                   />
                 }
-                bgColor="#EDE9F0"
+                bgColor={specFeatures['knowledge-hub']['bg-color']}
               >
                 <Image
-                  src="/marketing/homepage/knowledge-hub.webp"
+                  src={specFeatures['knowledge-hub'].image}
                   alt="Knowledge Hub"
                   width={1708}
                   height={1113}
@@ -97,8 +99,11 @@ export default function HomepageSpecFeaturesForExistingProduct() {
               <div className="bg-offwhite w-full relative rounded-2xl p-6 lg:p-8 flex flex-col gap-4 lg:min-h-[400px] min-h-[350px] overflow-clip">
                 <div className="flex items-start lg:items-center justify-start gap-4">
                   <div
-                    className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min text-[#7A4EA1]`}
-                    style={{ backgroundColor: '#EDE9F0' }}
+                    className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min`}
+                    style={{
+                      backgroundColor: specFeatures['knowledge-hub']['bg-color'],
+                      color: specFeatures['knowledge-hub']['icon-color']
+                    }}
                   >
                     <Notebook className="size-6" strokeWidth={1} />
                   </div>
@@ -116,7 +121,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                   />
                 </p>
                 <Image
-                  src="/marketing/homepage/knowledge-hub.webp"
+                  src={specFeatures['knowledge-hub'].image}
                   alt="Knowledge Hub"
                   width={1708}
                   height={1113}
@@ -135,7 +140,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                     cy="286.405"
                     rx="286.405"
                     ry="286.405"
-                    fill={'#EDE9F0'}
+                    fill={specFeatures['knowledge-hub']['bg-color']}
                   />
                 </svg>
               </div>

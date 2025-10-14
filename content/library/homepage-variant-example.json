@@ -1,0 +1,146 @@
+{
+  "hero": {
+    "title": "Transform Ideas into Specs with AI",
+    "subtitle": "Build comprehensive product requirements, detailed user flows, and launch-ready documentation with AI that learns your product vision.",
+    "cta-text": "Start Building for Free",
+    "yc-badge": "Backed by Y Combinator"
+  },
+  "ultimate-prd": {
+    "title": "Build your ultimate PRD effortlessly",
+    "subtitle": "From initial concept to complete product specification in moments",
+    "chat-card": {
+      "title": "Collaborate with AI",
+      "image": "/marketing/homepage/chat-with-prdkit-ai.webp",
+      "image-mobile": "/marketing/homepage/chat-with-prdkit-ai-mobile.webp"
+    },
+    "prd-card": {
+      "title": "Get comprehensive documentation",
+      "image": "/marketing/homepage/bike-service-pro.webp",
+      "image-mobile": "/marketing/homepage/bike-service-pro-mobile.webp"
+    }
+  },
+  "enhanced-prd-clarity": {
+    "title": "Boost PRD impact with visual artifacts",
+    "subtitle": "Accelerate team alignment with automatically generated visual aids from your PRD.",
+    "wireframes": {
+      "title": "Visual Mockups",
+      "description": "Preview your product interface with AI-generated mockups that help validate design decisions early",
+      "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
+      "icon-color": "#4A90E2",
+      "bg-color": "#E3F2FD"
+    },
+    "user-flows": {
+      "title": "Journey Maps",
+      "description": "Visualize user journeys with automatically generated flow diagrams that clarify navigation paths",
+      "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
+      "icon-color": "#9B59B6",
+      "bg-color": "#F3E5F5"
+    },
+    "social-posts": {
+      "title": "Launch Content",
+      "description": "Generate social media content to create buzz before your product launch",
+      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon-color": "#F39C12",
+      "bg-color": "#FFF8E1"
+    },
+    "simulated-reviews": {
+      "title": "AI Feedback",
+      "description": "Get simulated user feedback based on your PRD to identify potential issues before launch",
+      "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
+      "icon-color": "#27AE60",
+      "bg-color": "#E8F5E9",
+      "badge": "Soon"
+    },
+    "press-release": {
+      "title": "Launch Announcement",
+      "description": "Draft compelling press releases that communicate your product vision clearly",
+      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon-color": "#E74C3C",
+      "bg-color": "#FFEBEE",
+      "badge": "Soon"
+    },
+    "demo-scripts": {
+      "title": "Presentation Scripts",
+      "description": "Create polished demo scripts that highlight your product's key benefits",
+      "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
+      "icon-color": "#16A085",
+      "bg-color": "#E0F2F1",
+      "badge": "Soon"
+    }
+  },
+  "prd-in-workflow": {
+    "title": "Seamlessly integrate PRD into your development flow",
+    "subtitle": "Export to your preferred tools",
+    "live-prototyping": {
+      "title": "Power your AI development agents",
+      "subtitle": "Instant prototyping",
+      "description": "Convert your PRD to optimized prompts for Bolt, Loveable, v0, or Cursor for rapid prototyping."
+    },
+    "share-with-team": {
+      "title": "Collaborate with your team",
+      "subtitle": "Works with your tools",
+      "description": "Generate shareable links or export to Notion, Confluence, and other collaboration platforms"
+    }
+  },
+  "spec-features": {
+    "title": "Define features for established products",
+    "subtitle": "PRDKit intelligently understands your product context to accelerate feature specification.",
+    "automated-context": {
+      "title": "Smart context discovery",
+      "description": "Share your website URL, and PRDKit automatically learns your product, users, and goals",
+      "image": "/marketing/homepage/automated-context-gathering.webp",
+      "icon-color": "#4A90E2",
+      "bg-color": "#E3F2FD"
+    },
+    "product-screen-analysis": {
+      "title": "Visual Analysis",
+      "description": "Upload product screenshots, and PRDKit automatically identifies flows, features, and UI patterns",
+      "image": "/marketing/homepage/product-screen-analysis.webp",
+      "icon-color": "#27AE60",
+      "bg-color": "#E8F5E9"
+    },
+    "knowledge-hub": {
+      "title": "Product Intelligence",
+      "description": "Centralize product knowledge with AI-generated personas, journeys, and strategic objectives",
+      "image": "/marketing/homepage/knowledge-hub.webp",
+      "icon-color": "#9B59B6",
+      "bg-color": "#F3E5F5"
+    }
+  },
+  "works-where": {
+    "title": "Available in your workspace",
+    "subtitle": "Use PRDKit wherever your team collaborates. In Slack, mobile, or web.",
+    "slack": {
+      "title": "Slack",
+      "description": "Add PRDKit to your Slack workspace for seamless team collaboration",
+      "bg-color": "#FFF59D"
+    },
+    "teams": {
+      "title": "Teams",
+      "description": "Coming soon to \nMicrosoft Teams",
+      "bg-color": "#E1BEE7",
+      "badge": "Soon"
+    },
+    "web": {
+      "title": "Web app",
+      "description": "Access PRDKit from any browser, anywhere",
+      "bg-color": "#B2DFDB",
+      "icon-color": "#00897B"
+    }
+  },
+  "secondary-cta": {
+    "title": "Begin creating outstanding PRDs today",
+    "subtitle": "Join forward-thinking teams reducing documentation time, enhancing clarity, and shipping faster with PRDKit.",
+    "cta-text": "Start Building for Free"
+  },
+  "product-hunt": {
+    "announcement": "🚀 We're live on Product Hunt, and we'd love your support!",
+    "announcement-cta": "Check out the announcement →",
+    "welcome": "👋 Welcome, Product Hunters! Claim $10 in PRDKit credits ({credits} credits) when you sign up this week."
+  },
+  "privacy": {
+    "title": "Your data is safe",
+    "subtitle": "We never use your data to train public AI models.",
+    "link-text": "Learn more"
+  }
+}
