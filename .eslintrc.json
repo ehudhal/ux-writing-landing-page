@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    //  "plugin:tailwindcss/recommended",
+    "plugin:@inngest/recommended"
+  ],
+  "plugins": [
+    // "tailwindcss",
+    "@inngest"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  }
+}

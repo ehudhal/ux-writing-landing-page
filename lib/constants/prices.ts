@@ -1,0 +1,1 @@
+export const PRODUCT_HUNT_CREDITS = 100

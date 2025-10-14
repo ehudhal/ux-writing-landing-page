@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireframe Example</title>
+    <link rel="stylesheet" href="../../public/css/wireframe.css" />
+  </head>
+  <body>
+    <div class="wf-container">
+      <div class="wf-header">Example Wireframe</div>
+
+      <nav class="wf-nav wf-flex space-between">
+        <div class="wf-flex">
+          <div class="wf-text">Home</div>
+          <div class="wf-text">About</div>
+        </div>
+        <div class="wf-flex align-center">
+          <div class="wf-avatar"></div>
+          <div class="wf-text">John Doe</div>
+        </div>
+      </nav>
+
+      <div class="wf-grid" style="grid-template-columns: 2fr 1fr">
+        <div class="wf-box">
+          <label class="wf-label">Username</label>
+          <input class="wf-input" type="text" placeholder="Enter username" />
+
+          <label class="wf-label">Password</label>
+          <input
+            class="wf-input"
+            type="password"
+            placeholder="Enter password"
+          />
+
+          <div class="wf-flex">
+            <button class="wf-button">Login</button>
+            <button class="wf-button">Cancel</button>
+          </div>
+        </div>
+
+        <div class="wf-box">
+          <div class="wf-text">Need help? Contact support</div>
+        </div>
+      </div>
+    </div>
+    <div class="wf-container">
+      <div class="wf-header">Product Page</div>
+
+      <div class="wf-grid" style="grid-template-columns: 1fr 1fr">
+        <div class="wf-image-container">
+          <div class="wf-image" style="height: 300px; width: 300px"></div>
+          <div class="wf-image-caption">Hover over the image to zoom in.</div>
+        </div>
+
+        <div class="wf-box">
+          <div class="wf-text" style="font-size: 20px; font-weight: bold">
+            Product Name
+          </div>
+          <div class="wf-text" style="margin: 16px 0">Product Description</div>
+          <div class="wf-text">Price: $XX.XX</div>
+        </div>
+      </div>
+    </div>
+    <div class="wf-container">
+      <div class="wf-header">Dropdown Examples</div>
+
+      <div class="wf-flex" style="gap: 32px">
+        <!-- Closed dropdown example -->
+        <div class="wf-dropdown">
+          <div class="wf-dropdown-toggle">Select option</div>
+        </div>
+
+        <!-- Open dropdown example -->
+        <div class="wf-dropdown">
+          <div class="wf-dropdown-toggle">Selected: Option 1</div>
+          <div class="wf-dropdown-menu">
+            <div class="wf-dropdown-item">Option 1</div>
+            <div class="wf-dropdown-item">Option 2</div>
+            <div class="wf-dropdown-item">Option 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wf-container" style="margin-top: 40px">
+      <div class="wf-header">Mobile View Example</div>
+
+      <div class="wf-mobile-wrapper">
+        <div class="wf-mobile-screen">
+          <!-- Mobile content -->
+
+          <div class="wf-header">Mobile App</div>
+
+          <!-- Profile Section -->
+          <div class="wf-list">
+            <div class="wf-list-item">
+              <div class="wf-list-item-content">
+                <div class="wf-avatar"></div>
+                <div class="wf-text">Profile</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- iOS-style Settings List -->
+          <div class="wf-list">
+            <!-- Account Settings Group -->
+            <div class="wf-list-header">Account Settings</div>
+            <div class="wf-list-item">
+              <div class="wf-list-item-content">
+                <div class="wf-icon"></div>
+                <div class="wf-text">Settings</div>
+              </div>
+              <div class="wf-icon"></div>
+            </div>
+            <div class="wf-list-item">
+              <div class="wf-list-item-content">
+                <div class="wf-icon"></div>
+                <div class="wf-text">Notifications</div>
+              </div>
+              <div class="wf-icon"></div>
+            </div>
+            <div class="wf-list-item">
+              <div class="wf-list-item-content">
+                <div class="wf-icon"></div>
+                <div class="wf-text">Privacy</div>
+              </div>
+              <div class="wf-icon"></div>
+            </div>
+
+            <!-- App Settings Group -->
+          </div>
+          <div class="wf-list">
+            <div class="wf-list-header">App Settings</div>
+            <div class="wf-list-item">
+              <div class="wf-list-item-content">
+                <div class="wf-icon"></div>
+                <div class="wf-text">Language</div>
+              </div>
+              <div class="wf-list-item-value">English</div>
+            </div>
+            <div class="wf-list-item">
+              <div class="wf-list-item-content">
+                <div class="wf-icon"></div>
+                <div class="wf-text">Theme</div>
+              </div>
+              <div class="wf-list-item-value">Light</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

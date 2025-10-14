@@ -1,0 +1,12 @@
+html,
+body {
+    overflow: hidden
+}
+
+@media (min-width: 768px) {
+
+    html,
+    body {
+        overflow: visible;
+    }
+}

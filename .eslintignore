@@ -1,0 +1,6 @@
+node_modules
+/public/css/tailwind.js
+/tailwind.config.js
+*.config.js
+tsconfig.json
+.next

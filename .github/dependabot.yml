@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/' # Location of package manifests
+    schedule:
+      interval: 'weekly'
+    groups:
+      dev-deps:
+        dependency-type: 'development'
+      prod-deps:
+        dependency-type: 'production'
+    ignore:
+      - dependency-name: 'eslint'
+      - dependency-name: 'markdown-it'
+      - dependency-name: 'react-day-picker'
+      - dependency-name: 'node-vibrant'

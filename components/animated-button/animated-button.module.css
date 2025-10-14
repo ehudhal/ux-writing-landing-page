@@ -1,0 +1,28 @@
+.container {
+    scale: 1;
+    transition: all 0.3s;
+    animation: bounce 1s infinite;
+}
+
+.container:hover {
+    scale: 1.05;
+}
+
+.container:active {
+    scale: 0.95;
+    animation: none;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

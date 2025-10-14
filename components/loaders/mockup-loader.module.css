@@ -1,0 +1,45 @@
+.container {
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.skeleton {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    transform-origin: top left;
+    overflow: auto;
+}
+
+.skeleton:not(.thumbnail) {
+    min-width: 320px;
+    border-radius: 2px;
+}
+
+.loaderWrapper {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.loader {
+    width: 2rem;
+    height: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

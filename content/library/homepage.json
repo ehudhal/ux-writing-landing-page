@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "title": "Product managers - this one’s for you.",
+    "subtitle": "AI-powered product requirements, visual user flows, and launch-ready content—all in one place.",
+    "cta-text": "Get started for free"
+  },
+  "gets-product": {
+    "title": "Gets your product",
+    "description": "PRDKit's context-aware AI goes beyond generic advice. It learns the nuances of your product, design system, and business goals.\n\nThis means every suggestion is fine-tuned to help you build on-brand experiences, guided by your best practices."
+  },
+  "better-time": {
+    "title": "There's no better time \n\n to be a designer",
+    "cta-text": "Upgrade your work with AI"
+  },
+  "generate-compare": {
+    "title": "Generate & compare \n\nUX approaches",
+    "description": "Instantly explore multiple design directions with AI-generated lo-fi wireframes."
+  },
+  "design-ops": {
+    "title": "AI for Design Ops",
+    "sections": [
+      {
+        "title": "PRDKit is tailored \n\nto your product",
+        "points": [
+          "Learns your design system and industry best practices for smarter reviews.",
+          "Understands your business, product, and screens to provide contextual UX insights."
+        ]
+      },
+      {
+        "title": "Streamlined Collaboration\n\n& Alignment",
+        "points": [
+          "Bridge the gap between designers, PMs, and developers with instantly-generated briefs and reviews.",
+          "Enable all team members to communicate visually with generated flowcharts and wireframes."
+        ]
+      },
+      {
+        "title": "Continuous design QA",
+        "points": [
+          "Automate design audits across your entire product to ensure consistency and quality.",
+          "Track and improve design system adoption with actionable insights and recommendations.",
+          "Measure design impact with analytics that demonstrate ROI and drive better decisions."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Ready to elevate your design ops? Let's chat.",
+      "button-text": "Get in touch"
+    }
+  },
+  "privacy": {
+    "title": "Your data is safe",
+    "subtitle": "We never use your data to train public AI models.",
+    "link-text": "Learn more"
+  },
+  "catch-issues": {
+    "title": "Catch issues early \n\n& stay compliant",
+    "description": "Run AI-powered design reviews in Figma to spot issues and ensure design system consistency—so you avoid costly rework later."
+  },
+  "leverage-patterns": {
+    "title": "Leverage proven\n\nUX patterns",
+    "description": "No need to start from scratch—quickly find and apply established patterns for common flows."
+  },
+  "works-where": {
+    "title": "Works where you do"
+  },
+  "no-spec": {
+    "title": "No spec? \n\nNo problem!",
+    "description": "Generate a detailed PRD in seconds, and easily align with you team on success criteria and scope."
+  }
+}
