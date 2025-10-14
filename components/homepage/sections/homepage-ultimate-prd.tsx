@@ -1,4 +1,5 @@
 'use client'
+import Content from '@/content/content'
 import { useIsMobile } from '@/lib/hooks/use-media-query'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -19,17 +20,19 @@ export default function HomepageUltimatePRD() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full flex flex-col gap-6 lg:gap-16 relative px-4 lg:px-0">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center ">
-            Create the ultimate PRD in minutes
+            <Content contentKey="ultimate-prd.title" origin="homepage" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            From conversation to comprehensive product documentation in just a
-            few clicks
+            <Content contentKey="ultimate-prd.subtitle" origin="homepage" />
           </p>
         </div>
         <div className=" bg-white rounded-2xl flex flex-col lg:flex-row gap-4 p-6 border-[#DEDEDB] border z-[20]">
           <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
             <h4 className="text-xl font-serif font-light">
-              Chat with PRDKit AI
+              <Content
+                contentKey="ultimate-prd.chat-card-title"
+                origin="homepage"
+              />
             </h4>
             <Image
               src={
@@ -45,7 +48,10 @@ export default function HomepageUltimatePRD() {
           </div>
           <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
             <h4 className="text-xl font-serif font-light">
-              Get a structured PRD
+              <Content
+                contentKey="ultimate-prd.prd-card-title"
+                origin="homepage"
+              />
             </h4>
             <Image
               src={

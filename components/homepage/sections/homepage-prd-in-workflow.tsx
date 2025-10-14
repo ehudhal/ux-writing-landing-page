@@ -1,4 +1,5 @@
 'use client'
+import Content from '@/content/content'
 import { fadeInUpVariants } from '../animations'
 
 import { IconNotion } from '@/components/ui/icons'
@@ -20,23 +21,31 @@ export default function HomepagePRDInWorkflow() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full items-center flex flex-col gap-6 lg:gap-12 relative px-4 lg:px-0">
         <div className="flex flex-col items-center gap-4 mb-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center max-w-[800px]">
-            Accelerate validation by plugging the PRD into your workflow
+            <Content contentKey="prd-in-workflow.title" origin="homepage" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            Connect with your favorite tools
+            <Content contentKey="prd-in-workflow.subtitle" origin="homepage" />
           </p>
         </div>
         <div className="bg-white max-w-full w-full lg:max-w-[1000px] rounded-3xl p-6 lg:p-4 lg:pl-16 flex flex-col lg:flex-row items-center justify-center">
           <div className="flex flex-col gap-6 lg:mb-0 mb-6">
             <h4 className="text-2xl lg:text-4xl font-serif font-light">
-              Activate the next AI agent in your stack
+              <Content
+                contentKey="prd-in-workflow.live-prototyping.title"
+                origin="homepage"
+              />
             </h4>
             <h6 className="text-base lg:text-lg font-medium">
-              Live prototyping
+              <Content
+                contentKey="prd-in-workflow.live-prototyping.subtitle"
+                origin="homepage"
+              />
             </h6>
             <p className="text-sm lg:text-base">
-              Export your PRD to LLM-optimized format for live prototyping with
-              Bolt, Loveable, v0, or Cursor.
+              <Content
+                contentKey="prd-in-workflow.live-prototyping.description"
+                origin="homepage"
+              />
             </p>
           </div>
           <Integrations
@@ -72,14 +81,22 @@ export default function HomepagePRDInWorkflow() {
         <div className="bg-white max-w-full w-full lg:max-w-[1000px] rounded-3xl p-6 lg:p-4 lg:pl-16 flex flex-col lg:flex-row items-center justify-center">
           <div className="flex flex-col gap-6 lg:mb-0 mb-6">
             <h4 className="text-2xl lg:text-4xl font-serif font-light max-w-[200px]">
-              Share with your team
+              <Content
+                contentKey="prd-in-workflow.share-with-team.title"
+                origin="homepage"
+              />
             </h4>
             <h6 className="text-base lg:text-lg font-medium">
-              Add to your existing workspace
+              <Content
+                contentKey="prd-in-workflow.share-with-team.subtitle"
+                origin="homepage"
+              />
             </h6>
             <p className="text-sm lg:text-base">
-              Get a shareable link or copy and paste into Notion, Confluence, or
-              any team workspace
+              <Content
+                contentKey="prd-in-workflow.share-with-team.description"
+                origin="homepage"
+              />
             </p>
           </div>
           <Integrations

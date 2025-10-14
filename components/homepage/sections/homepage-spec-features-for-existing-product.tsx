@@ -1,4 +1,5 @@
 'use client'
+import Content from '@/content/content'
 import { fadeInUpVariants } from '../animations'
 
 import { useIsMobile, useIsTablet } from '@/lib/hooks/use-media-query'
@@ -23,19 +24,16 @@ export default function HomepageSpecFeaturesForExistingProduct() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full items-center flex flex-col gap-6 lg:gap-12 relative px-4 ">
         <div className="flex flex-col items-center gap-4 mb-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center lg:max-w-[800px]">
-            Spec features for an existing product
+            <Content contentKey="spec-features.title" origin="homepage" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            PRDKit automatically gathers the context to
-            <br className="hidden lg:block" /> support iterating on
-            enterprise-scale products.
+            <Content contentKey="spec-features.subtitle" origin="homepage" />
           </p>
         </div>
         <div className="flex flex-col gap-4 w-full">
           <div className="  gap-4 grid grid-cols-1 lg:grid-cols-2 justify-items-center ">
             <SpecFeatureCard
-              title="Automated context gathering"
-              description="Paste your homepage URL, and PRDKit automatically gathers insights about your product, audience, and business objectives"
+              contentKey="spec-features.automated-context"
               icon={
                 <Globe
                   className="size-4 lg:size-6"
@@ -54,8 +52,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
               />
             </SpecFeatureCard>
             <SpecFeatureCard
-              title="Product Screen Analysis"
-              description="Upload your product screens, and PRDKit intelligently maps user flows, functionality, and interface elements"
+              contentKey="spec-features.product-screen-analysis"
               icon={
                 <Globe
                   className="size-4 lg:size-6"
@@ -75,8 +72,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
             </SpecFeatureCard>
             {!isDesktop && (
               <SpecFeatureCard
-                title="Knowledge Hub"
-                description="Build comprehensive product knowledge with automatically generated personas, user journeys, and business objectives"
+                contentKey="spec-features.knowledge-hub"
                 icon={
                   <Notebook
                     className="size-4 lg:size-6"
@@ -107,12 +103,17 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                     <Notebook className="size-6" strokeWidth={1} />
                   </div>
                   <h3 className="text-[22px] lg:text-3xl font-serif font-light">
-                    Knowledge Hub
+                    <Content
+                      contentKey="spec-features.knowledge-hub.title"
+                      origin="homepage"
+                    />
                   </h3>
                 </div>
                 <p className="max-w-[400px]">
-                  Build comprehensive product knowledge with automatically
-                  generated personas, user journeys, and business objectives
+                  <Content
+                    contentKey="spec-features.knowledge-hub.description"
+                    origin="homepage"
+                  />
                 </p>
                 <Image
                   src="/marketing/homepage/knowledge-hub.webp"
@@ -147,16 +148,14 @@ export default function HomepageSpecFeaturesForExistingProduct() {
 }
 
 type SpecFeatureCardProps = {
-  title: string
-  description: string
+  contentKey: string
   icon: React.ReactNode
   bgColor: string
   children?: React.ReactNode
 }
 
 const SpecFeatureCard = ({
-  title,
-  description,
+  contentKey,
   icon,
   bgColor,
   children
@@ -171,10 +170,12 @@ const SpecFeatureCard = ({
           {icon}
         </div>
         <h3 className="text-[22px] lg:text-3xl font-serif font-light">
-          {title}
+          <Content contentKey={`${contentKey}.title`} origin="homepage" />
         </h3>
       </div>
-      <p className="text-sm lg:text-base">{description}</p>
+      <p className="text-sm lg:text-base">
+        <Content contentKey={`${contentKey}.description`} origin="homepage" />
+      </p>
       {children}
       <svg
         width="463"

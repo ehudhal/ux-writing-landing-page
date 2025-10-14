@@ -1,6 +1,6 @@
 import HomepageFooter from '@/components/homepage/homepage-footer'
 import HomepageHeader from '@/components/homepage/homepage-header'
-import ProductHuntBanner from '@/components/homepage/product-hunt-banner'
+// import ProductHuntBanner from '@/components/homepage/product-hunt-banner'
 import HomepageEnhancedPRDClarity from '@/components/homepage/sections/homepage-enhanced-prd-clarity'
 import HomepagePRDInWorkflow from '@/components/homepage/sections/homepage-prd-in-workflow'
 import HomepagePrivacy from '@/components/homepage/sections/homepage-privacy'
@@ -13,7 +13,7 @@ import SimpleHomeHero from '@/components/homepage/simple-home-hero'
 export default function IndexPage() {
   return (
     <div className="bg-[#FDFDFC] max-h-[100dvh] flex-1 h-screen overflow-y-auto flex flex-col justify-between overflow-x-hidden scroll-smooth">
-      <ProductHuntBanner />
+      {/* <ProductHuntBanner /> */}
       <HomepageHeader />
       <SimpleHomeHero />
       <HomepageUltimatePRD />

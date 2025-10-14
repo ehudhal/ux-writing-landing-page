@@ -1,4 +1,5 @@
 'use client'
+import Content from '@/content/content'
 import { fadeInUpVariants } from '../animations'
 
 import { motion } from 'framer-motion'
@@ -26,17 +27,21 @@ export default function HomepageEnhancedPRDClarity() {
       <div className="lg:max-w-[1200px] max-w-[95%]  mx-auto w-full flex flex-col gap-6 lg:gap-16 relative px-4 lg:px-0">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center ">
-            Enhance PRD clarity with complementary content
+            <Content
+              contentKey="enhanced-prd-clarity.title"
+              origin="homepage"
+            />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            Drive alignment across cross-functional teams with PRD-based
-            generated artifacts.
+            <Content
+              contentKey="enhanced-prd-clarity.subtitle"
+              origin="homepage"
+            />
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <EnhancedPRDClarityCard
-            title="Wireframes"
-            description="See how your product would look like with visual aids to fine-tune the design before committing resources"
+            contentKey="enhanced-prd-clarity.wireframes"
             icon={
               <PenTool
                 className="size-4 lg:size-6 text-[#51A1E1]"
@@ -54,8 +59,7 @@ export default function HomepageEnhancedPRDClarity() {
             />
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard
-            title="User flows"
-            description="Create clear user flow diagrams that illustrate how users will navigate through your product"
+            contentKey="enhanced-prd-clarity.user-flows"
             icon={
               <LayoutGrid
                 className="size-4 lg:size-6 text-[#7A4EA1]"
@@ -73,8 +77,7 @@ export default function HomepageEnhancedPRDClarity() {
             />
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard
-            title="Social posts"
-            description="Create social media announcements to build anticipation for your product launch"
+            contentKey="enhanced-prd-clarity.social-posts"
             icon={
               <Share2
                 className="size-4 lg:size-6 text-[#E1C151]"
@@ -92,8 +95,7 @@ export default function HomepageEnhancedPRDClarity() {
             />
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard
-            title="Simulated reviews"
-            description="Evaluate how well your product resonates with users using AI simulated product reviews based on your PRD"
+            contentKey="enhanced-prd-clarity.simulated-reviews"
             soon
             icon={
               <Users2
@@ -112,8 +114,7 @@ export default function HomepageEnhancedPRDClarity() {
             />
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard
-            title="Press release"
-            description="Create compelling future press releases that help align your team on the end vision"
+            contentKey="enhanced-prd-clarity.press-release"
             soon
             icon={
               <FileText
@@ -141,8 +142,7 @@ export default function HomepageEnhancedPRDClarity() {
             </div>
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard
-            title="Demo scripts"
-            description="Generate detailed demo scripts that showcase your product's value proposition"
+            contentKey="enhanced-prd-clarity.demo-scripts"
             soon
             icon={
               <PlayCircle
@@ -167,8 +167,7 @@ export default function HomepageEnhancedPRDClarity() {
 }
 
 type EnhancedPRDClarityCardProps = {
-  title: string
-  description: string
+  contentKey: string
   icon: React.ReactNode
   color: string
   children?: React.ReactNode
@@ -176,8 +175,7 @@ type EnhancedPRDClarityCardProps = {
 }
 
 export const EnhancedPRDClarityCard = ({
-  title,
-  description,
+  contentKey,
   icon,
   color,
   children,
@@ -186,7 +184,9 @@ export const EnhancedPRDClarityCard = ({
   return (
     <div className="bg-offwhite relative rounded-2xl p-8 flex flex-col gap-4 min-h-[400px] lg:min-h-[450px] overflow-clip">
       <div className="flex items-center justify-between">
-        <h3 className="text-xl lg:text-3xl font-serif font-light">{title}</h3>
+        <h3 className="text-xl lg:text-3xl font-serif font-light">
+          <Content contentKey={`${contentKey}.title`} origin="homepage" />
+        </h3>
         <div
           className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min`}
           style={{ backgroundColor: color }}
@@ -194,11 +194,13 @@ export const EnhancedPRDClarityCard = ({
           {icon}
         </div>
       </div>
-      <p className="text-sm lg:text-base">{description}</p>
+      <p className="text-sm lg:text-base">
+        <Content contentKey={`${contentKey}.description`} origin="homepage" />
+      </p>
       {children}
       {soon && (
         <span className="absolute bottom-2 right-2 z-40 bg-white rounded-full px-6 py-2 border border-offblack/10 text-sm lg:text-base text-offblack/50">
-          Soon
+          <Content contentKey={`${contentKey}.badge`} origin="homepage" />
         </span>
       )}
       <svg

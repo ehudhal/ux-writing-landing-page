@@ -1,70 +1,107 @@
 {
   "hero": {
-    "title": "Product managers - this one’s for you.",
-    "subtitle": "AI-powered product requirements, visual user flows, and launch-ready content—all in one place.",
-    "cta-text": "Get started for free"
+    "title": "AI-Powered Product Requirements",
+    "subtitle": "Generate product requirements, user flows, and launch-ready content with AI that understands your product and design system.",
+    "cta-text": "Get Started for Free",
+    "yc-badge": "Backed by Combinator"
   },
-  "gets-product": {
-    "title": "Gets your product",
-    "description": "PRDKit's context-aware AI goes beyond generic advice. It learns the nuances of your product, design system, and business goals.\n\nThis means every suggestion is fine-tuned to help you build on-brand experiences, guided by your best practices."
+  "ultimate-prd": {
+    "title": "Create the ultimate PRD in minutes",
+    "subtitle": "From conversation to comprehensive product documentation in just a few clicks",
+    "chat-card-title": "Chat with PRDKit AI",
+    "prd-card-title": "Get a structured PRD"
   },
-  "better-time": {
-    "title": "There's no better time \n\n to be a designer",
-    "cta-text": "Upgrade your work with AI"
-  },
-  "generate-compare": {
-    "title": "Generate & compare \n\nUX approaches",
-    "description": "Instantly explore multiple design directions with AI-generated lo-fi wireframes."
-  },
-  "design-ops": {
-    "title": "AI for Design Ops",
-    "sections": [
-      {
-        "title": "PRDKit is tailored \n\nto your product",
-        "points": [
-          "Learns your design system and industry best practices for smarter reviews.",
-          "Understands your business, product, and screens to provide contextual UX insights."
-        ]
-      },
-      {
-        "title": "Streamlined Collaboration\n\n& Alignment",
-        "points": [
-          "Bridge the gap between designers, PMs, and developers with instantly-generated briefs and reviews.",
-          "Enable all team members to communicate visually with generated flowcharts and wireframes."
-        ]
-      },
-      {
-        "title": "Continuous design QA",
-        "points": [
-          "Automate design audits across your entire product to ensure consistency and quality.",
-          "Track and improve design system adoption with actionable insights and recommendations.",
-          "Measure design impact with analytics that demonstrate ROI and drive better decisions."
-        ]
-      }
-    ],
-    "cta": {
-      "title": "Ready to elevate your design ops? Let's chat.",
-      "button-text": "Get in touch"
+  "enhanced-prd-clarity": {
+    "title": "Enhance PRD clarity with complementary content",
+    "subtitle": "Drive alignment across cross-functional teams with PRD-based generated artifacts.",
+    "wireframes": {
+      "title": "Wireframes",
+      "description": "See how your product would look like with visual aids to fine-tune the design before committing resources"
+    },
+    "user-flows": {
+      "title": "User flows",
+      "description": "Create clear user flow diagrams that illustrate how users will navigate through your product"
+    },
+    "social-posts": {
+      "title": "Social posts",
+      "description": "Create social media announcements to build anticipation for your product launch"
+    },
+    "simulated-reviews": {
+      "title": "Simulated reviews",
+      "description": "Evaluate how well your product resonates with users using AI simulated product reviews based on your PRD",
+      "badge": "Soon"
+    },
+    "press-release": {
+      "title": "Press release",
+      "description": "Create compelling future press releases that help align your team on the end vision",
+      "badge": "Soon"
+    },
+    "demo-scripts": {
+      "title": "Demo scripts",
+      "description": "Generate detailed demo scripts that showcase your product's value proposition",
+      "badge": "Soon"
     }
+  },
+  "prd-in-workflow": {
+    "title": "Accelerate validation by plugging the PRD into your workflow",
+    "subtitle": "Connect with your favorite tools",
+    "live-prototyping": {
+      "title": "Activate the next AI agent in your stack",
+      "subtitle": "Live prototyping",
+      "description": "Export your PRD to LLM-optimized format for live prototyping with Bolt, Loveable, v0, or Cursor."
+    },
+    "share-with-team": {
+      "title": "Share with your team",
+      "subtitle": "Add to your existing workspace",
+      "description": "Get a shareable link or copy and paste into Notion, Confluence, or any team workspace"
+    }
+  },
+  "spec-features": {
+    "title": "Spec features for an existing product",
+    "subtitle": "PRDKit automatically gathers the context to support iterating on enterprise-scale products.",
+    "automated-context": {
+      "title": "Automated context gathering",
+      "description": "Paste your homepage URL, and PRDKit automatically gathers insights about your product, audience, and business objectives"
+    },
+    "product-screen-analysis": {
+      "title": "Product Screen Analysis",
+      "description": "Upload your product screens, and PRDKit intelligently maps user flows, functionality, and interface elements"
+    },
+    "knowledge-hub": {
+      "title": "Knowledge Hub",
+      "description": "Build comprehensive product knowledge with automatically generated personas, user journeys, and business objectives"
+    }
+  },
+  "works-where": {
+    "title": "Works where you do",
+    "subtitle": "Chat with PRDKit where inspiration strikes you. In Slack, on your mobile, or on the web.",
+    "slack": {
+      "title": "Slack",
+      "description": "Integrate PRDKit directly into your team's Slack workspace"
+    },
+    "teams": {
+      "title": "Teams",
+      "description": "Coming soon to \nMicrosoft Teams",
+      "badge": "Soon"
+    },
+    "web": {
+      "title": "Web app",
+      "description": "Access PRDKit from any browser, anywhere"
+    }
+  },
+  "secondary-cta": {
+    "title": "Start crafting exceptional PRDs today",
+    "subtitle": "Join innovative teams saving hours, improving communication, and bringing ideas to life with PRDKit.",
+    "cta-text": "Get Started for Free"
+  },
+  "product-hunt": {
+    "announcement": "🚀 We're live on Product Hunt, and we'd love your support!",
+    "announcement-cta": "Check out the announcement →",
+    "welcome": "👋 Welcome, Product Hunters! Claim $10 in PRDKit credits ({credits} credits) when you sign up this week."
   },
   "privacy": {
     "title": "Your data is safe",
     "subtitle": "We never use your data to train public AI models.",
     "link-text": "Learn more"
-  },
-  "catch-issues": {
-    "title": "Catch issues early \n\n& stay compliant",
-    "description": "Run AI-powered design reviews in Figma to spot issues and ensure design system consistency—so you avoid costly rework later."
-  },
-  "leverage-patterns": {
-    "title": "Leverage proven\n\nUX patterns",
-    "description": "No need to start from scratch—quickly find and apply established patterns for common flows."
-  },
-  "works-where": {
-    "title": "Works where you do"
-  },
-  "no-spec": {
-    "title": "No spec? \n\nNo problem!",
-    "description": "Generate a detailed PRD in seconds, and easily align with you team on success criteria and scope."
   }
 }

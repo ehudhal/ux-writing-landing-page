@@ -1,5 +1,7 @@
 'use client'
 
+import Content from '@/content/content'
+import contentHomepage from '@/content/library/homepage.json'
 import { PRODUCT_HUNT_USER_KEY } from '@/lib/constants/local-storage'
 import { PRODUCT_HUNT_CREDITS } from '@/lib/constants/prices'
 import { LocalStorage } from '@/lib/localstorage'
@@ -37,25 +39,33 @@ export default function ProductHuntBanner() {
     return (
       <div className="w-full bg-[#eaf6ff] py-3 px-4 text-center">
         <p className="text-sm font-medium">
-          🚀 We&apos;re live on Product Hunt, and we&apos;d love your support!{' '}
+          <Content
+            contentKey="product-hunt.announcement"
+            origin="homepage"
+          />{' '}
           <Link
             href="https://www.producthunt.com/posts/prdkit?utm_source=prdkit&utm_medium=referral"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800 underline"
           >
-            Check out the announcement →
+            <Content
+              contentKey="product-hunt.announcement-cta"
+              origin="homepage"
+            />
           </Link>
         </p>
       </div>
     )
   }
 
+  // Get the welcome text from JSON and replace the placeholder
+  const welcomeText = contentHomepage['product-hunt'].welcome
+
   return (
     <div className="w-full bg-[#f5e9d7] py-3 px-4 text-center">
       <p className="text-sm font-medium">
-        👋 Welcome, Product Hunters! Claim $10 in PRDKit credits (
-        {PRODUCT_HUNT_CREDITS} credits) when you sign up this week.
+        {welcomeText.replace('{credits}', String(PRODUCT_HUNT_CREDITS))}
       </p>
     </div>
   )
