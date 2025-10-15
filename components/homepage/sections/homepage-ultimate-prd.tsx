@@ -9,8 +9,8 @@ import { defaultTransition, fadeInUpVariants } from '../animations'
 export default function HomepageUltimatePRD() {
   const isMobile = useIsMobile()
   const contentHomepage = useHomepageContent()
-  const chatCard = contentHomepage['ultimate-prd']['chat-card']
-  const prdCard = contentHomepage['ultimate-prd']['prd-card']
+  const primaryCard = contentHomepage['the-gist']['primary-card']
+  const secondaryCard = contentHomepage['the-gist']['secondary-card']
 
   return (
     <motion.section
@@ -24,23 +24,23 @@ export default function HomepageUltimatePRD() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full flex flex-col gap-6 lg:gap-16 relative px-4 lg:px-0">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center ">
-            <Content contentKey="ultimate-prd.title" />
+            <Content contentKey="the-gist.title" />
           </h2>
           <p className="text-center text-base lg:text-xl font-light">
-            <Content contentKey="ultimate-prd.subtitle" />
+            <Content contentKey="the-gist.subtitle" />
           </p>
         </div>
         <div className=" bg-white rounded-2xl flex flex-col lg:flex-row gap-4 p-6 border-[#DEDEDB] border z-[20]">
           <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
             <h4 className="text-xl font-serif font-light">
               <Content
-                contentKey="ultimate-prd.chat-card.title"
-               
+                contentKey="the-gist.primary-card.title"
+
               />
             </h4>
             <Image
-              src={isMobile ? chatCard['image-mobile'] : chatCard.image}
-              alt={chatCard.title}
+              src={isMobile ? primaryCard['image-mobile'] : primaryCard.image}
+              alt={primaryCard.title}
               className="w-full h-full object-cover rounded-2xl"
               width={1106}
               height={680}
@@ -49,13 +49,13 @@ export default function HomepageUltimatePRD() {
           <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
             <h4 className="text-xl font-serif font-light">
               <Content
-                contentKey="ultimate-prd.prd-card.title"
-               
+                contentKey="the-gist.secondary-card.title"
+
               />
             </h4>
             <Image
-              src={isMobile ? prdCard['image-mobile'] : prdCard.image}
-              alt={prdCard.title}
+              src={isMobile ? secondaryCard['image-mobile'] : secondaryCard.image}
+              alt={secondaryCard.title}
               width={1106}
               className="w-full h-full object-cover rounded-2xl"
               height={680}

@@ -5,45 +5,76 @@
     "cta-text": "Get Started for Free",
     "yc-badge": "Backed by Combinator"
   },
-  "ultimate-prd": {
+  "the-gist": {
     "title": "Create the ultimate PRD in minutes",
     "subtitle": "From conversation to comprehensive product documentation in just a few clicks",
-    "chat-card": {
+    "primary-card": {
+      "id": "chat-interface",
       "title": "Chat with PRDKit AI",
       "image": "/marketing/homepage/chat-with-prdkit-ai.webp",
       "image-mobile": "/marketing/homepage/chat-with-prdkit-ai-mobile.webp"
     },
-    "prd-card": {
+    "secondary-card": {
+      "id": "structured-output",
       "title": "Get a structured PRD",
       "image": "/marketing/homepage/bike-service-pro.webp",
       "image-mobile": "/marketing/homepage/bike-service-pro-mobile.webp"
     }
   },
-  "enhanced-prd-clarity": {
+  "challenges": {
+    "title": "The cost of poor product documentation",
+    "subtitle": "Without clear requirements, teams waste time, miss critical details, and ship products that miss the mark.",
+    "challenge-1": {
+      "id": "scattered-context",
+      "title": "Scattered context",
+      "description": "Product requirements live in Slack threads, meeting notes, and Google Docs. Teams waste hours hunting for the latest decisions.",
+      "icon-color": "#ED5F5F",
+      "bg-color": "#FCE4E4"
+    },
+    "challenge-2": {
+      "id": "inconsistent-quality",
+      "title": "Inconsistent quality",
+      "description": "Every PM has their own template. Some PRDs are comprehensive, others miss critical details, leading to misaligned teams.",
+      "icon-color": "#E1C151",
+      "bg-color": "#F3ECD1"
+    },
+    "challenge-3": {
+      "id": "time-consuming",
+      "title": "Time-consuming documentation",
+      "description": "PMs spend days writing PRDs instead of talking to customers. Documentation becomes a bottleneck, not an enabler.",
+      "icon-color": "#51A1E1",
+      "bg-color": "#D9ECF2"
+    }
+  },
+  "benefits": {
     "title": "Enhance PRD clarity with complementary content",
     "subtitle": "Drive alignment across cross-functional teams with PRD-based generated artifacts.",
-    "wireframes": {
+    "benefit-1": {
+      "id": "wireframes",
       "title": "Wireframes",
       "description": "See how your product would look like with visual aids to fine-tune the design before committing resources",
       "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
       "icon-color": "#51A1E1",
       "bg-color": "#D1EDF3"
     },
-    "user-flows": {
+    "benefit-2": {
+      "id": "user-flows",
       "title": "User flows",
       "description": "Create clear user flow diagrams that illustrate how users will navigate through your product",
       "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     },
-    "social-posts": {
+    "benefit-3": {
+      "id": "social-posts",
       "title": "Social posts",
       "description": "Create social media announcements to build anticipation for your product launch",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
     },
-    "simulated-reviews": {
+    "benefit-4": {
+      "id": "simulated-reviews",
       "title": "Simulated reviews",
       "description": "Evaluate how well your product resonates with users using AI simulated product reviews based on your PRD",
       "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
@@ -51,7 +82,8 @@
       "bg-color": "#C4F3E6",
       "badge": "Soon"
     },
-    "press-release": {
+    "benefit-5": {
+      "id": "press-release",
       "title": "Press release",
       "description": "Create compelling future press releases that help align your team on the end vision",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
@@ -59,7 +91,8 @@
       "bg-color": "#FCE4E4",
       "badge": "Soon"
     },
-    "demo-scripts": {
+    "benefit-6": {
+      "id": "demo-scripts",
       "title": "Demo scripts",
       "description": "Generate detailed demo scripts that showcase your product's value proposition",
       "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
@@ -68,38 +101,43 @@
       "badge": "Soon"
     }
   },
-  "prd-in-workflow": {
+  "how-it-works": {
     "title": "Accelerate validation by plugging the PRD into your workflow",
     "subtitle": "Connect with your favorite tools",
-    "live-prototyping": {
+    "integration-1": {
+      "id": "ai-prototyping",
       "title": "Activate the next AI agent in your stack",
       "subtitle": "Live prototyping",
       "description": "Export your PRD to LLM-optimized format for live prototyping with Bolt, Loveable, v0, or Cursor."
     },
-    "share-with-team": {
+    "integration-2": {
+      "id": "team-sharing",
       "title": "Share with your team",
       "subtitle": "Add to your existing workspace",
       "description": "Get a shareable link or copy and paste into Notion, Confluence, or any team workspace"
     }
   },
-  "spec-features": {
+  "features": {
     "title": "Spec features for an existing product",
     "subtitle": "PRDKit automatically gathers the context to support iterating on enterprise-scale products.",
-    "automated-context": {
+    "feature-1": {
+      "id": "context-gathering",
       "title": "Automated context gathering",
       "description": "Paste your homepage URL, and PRDKit automatically gathers insights about your product, audience, and business objectives",
       "image": "/marketing/homepage/automated-context-gathering.webp",
       "icon-color": "#51A1E1",
       "bg-color": "#D9ECF2"
     },
-    "product-screen-analysis": {
+    "feature-2": {
+      "id": "screen-analysis",
       "title": "Product Screen Analysis",
       "description": "Upload your product screens, and PRDKit intelligently maps user flows, functionality, and interface elements",
       "image": "/marketing/homepage/product-screen-analysis.webp",
       "icon-color": "#319B6B",
       "bg-color": "#E3F8E9"
     },
-    "knowledge-hub": {
+    "feature-3": {
+      "id": "knowledge-hub",
       "title": "Knowledge Hub",
       "description": "Build comprehensive product knowledge with automatically generated personas, user journeys, and business objectives",
       "image": "/marketing/homepage/knowledge-hub.webp",
@@ -110,22 +148,50 @@
   "works-where": {
     "title": "Works where you do",
     "subtitle": "Chat with PRDKit where inspiration strikes you. In Slack, on your mobile, or on the web.",
-    "slack": {
+    "platform-1": {
+      "id": "slack-integration",
       "title": "Slack",
-      "description": "Integrate PRDKit directly into your team's Slack workspace",
-      "bg-color": "#F6E7A5"
+      "description": "Integrate PRDKit directly into your team's Slack workspace for instant PRD generation from conversations.",
+      "cta-text": "Add to Slack",
+      "cta-url": "#",
+      "icon": "slack"
     },
-    "teams": {
-      "title": "Teams",
-      "description": "Coming soon to \nMicrosoft Teams",
-      "bg-color": "#E7DDF4",
-      "badge": "Soon"
-    },
-    "web": {
+    "platform-2": {
+      "id": "web-app",
       "title": "Web app",
-      "description": "Access PRDKit from any browser, anywhere",
-      "bg-color": "#C8F5E9",
-      "icon-color": "#319B6B"
+      "description": "Access PRDKit from any browser, anywhere. Full-featured experience with all PRD tools and templates.",
+      "cta-text": "Open Web App",
+      "cta-url": "#",
+      "icon": "globe"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about PRDKit",
+    "question-1": {
+      "id": "getting-started",
+      "question": "How do I get started with PRDKit?",
+      "answer": "Simply sign up for a free account and start chatting with the AI. You can begin creating PRDs immediately without any setup or configuration."
+    },
+    "question-2": {
+      "id": "data-security",
+      "question": "Is my product data secure?",
+      "answer": "Yes. We never use your data to train public AI models. Your product information is encrypted and stored securely, and you maintain full ownership of all your content."
+    },
+    "question-3": {
+      "id": "team-collaboration",
+      "question": "Can my whole team use PRDKit?",
+      "answer": "Absolutely. PRDKit is built for teams. You can invite unlimited team members, share PRDs, and collaborate in real-time across your organization."
+    },
+    "question-4": {
+      "id": "integrations",
+      "question": "Does PRDKit integrate with our existing tools?",
+      "answer": "Yes. Export your PRDs to Notion, Confluence, or any documentation platform. We also integrate with Slack and support AI development tools like Cursor, Bolt, and v0."
+    },
+    "question-5": {
+      "id": "customization",
+      "question": "Can I customize the PRD format?",
+      "answer": "PRDKit adapts to your needs. The AI learns from your context, existing documentation, and preferences to generate PRDs that match your team's style and requirements."
     }
   },
   "secondary-cta": {

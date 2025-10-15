@@ -17,7 +17,7 @@ import { defaultTransition } from '../animations'
 
 export default function HomepageEnhancedPRDClarity() {
   const contentHomepage = useHomepageContent()
-  const clarityContent = contentHomepage['enhanced-prd-clarity']
+  const clarityContent = contentHomepage['benefits']
   return (
     <motion.section
       className="bg-white py-24 lg:px-8 lg:py-32 relative "
@@ -32,95 +32,89 @@ export default function HomepageEnhancedPRDClarity() {
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center ">
             <Content
-              contentKey="enhanced-prd-clarity.title"
-             
+              contentKey="benefits.title"
+
             />
           </h2>
-          <p className="text-center text-base lg:text-xl font-light">
-            <Content
-              contentKey="enhanced-prd-clarity.subtitle"
-             
-            />
-          </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <EnhancedPRDClarityCard
-            contentKey="enhanced-prd-clarity.wireframes"
+            contentKey="benefits.benefit-1"
             icon={
               <PenTool
                 className="size-4 lg:size-6"
                 strokeWidth={1}
-                style={{ color: clarityContent.wireframes['icon-color'] }}
+                style={{ color: clarityContent['benefit-1']['icon-color'] }}
               />
             }
-            color={clarityContent.wireframes['bg-color']}
-            image={clarityContent.wireframes.image}
+            color={clarityContent['benefit-1']['bg-color']}
+            image={clarityContent['benefit-1'].image}
             imageClassName="z-20 absolute bottom-[-30px] lg:bottom-[-55px] left-1/2 h-auto w-[clamp(200px,280px,80%)] object-contain -translate-x-1/2 shadow-lg"
           />
           <EnhancedPRDClarityCard
-            contentKey="enhanced-prd-clarity.user-flows"
+            contentKey="benefits.benefit-2"
             icon={
               <LayoutGrid
                 className="size-4 lg:size-6"
                 strokeWidth={1}
-                style={{ color: clarityContent['user-flows']['icon-color'] }}
+                style={{ color: clarityContent['benefit-2']['icon-color'] }}
               />
             }
-            color={clarityContent['user-flows']['bg-color']}
-            image={clarityContent['user-flows'].image}
+            color={clarityContent['benefit-2']['bg-color']}
+            image={clarityContent['benefit-2'].image}
             imageClassName="z-20 absolute bottom-[-5px] left-1/2 -translate-x-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain  shadow-lg"
           />
           <EnhancedPRDClarityCard
-            contentKey="enhanced-prd-clarity.social-posts"
+            contentKey="benefits.benefit-3"
             icon={
               <Share2
                 className="size-4 lg:size-6"
                 strokeWidth={1}
-                style={{ color: clarityContent['social-posts']['icon-color'] }}
+                style={{ color: clarityContent['benefit-3']['icon-color'] }}
               />
             }
-            color={clarityContent['social-posts']['bg-color']}
-            image={clarityContent['social-posts'].image}
+            color={clarityContent['benefit-3']['bg-color']}
+            image={clarityContent['benefit-3'].image}
             imageClassName="z-20 absolute bottom-[-15%] left-1/2  h-auto w-[clamp(200px,230px,55%)] object-contain -translate-x-1/2 shadow-lg"
           />
           <EnhancedPRDClarityCard
-            contentKey="enhanced-prd-clarity.simulated-reviews"
+            contentKey="benefits.benefit-4"
             soon
             icon={
               <Users2
                 className="size-4 lg:size-6"
                 strokeWidth={1}
                 style={{
-                  color: clarityContent['simulated-reviews']['icon-color']
+                  color: clarityContent['benefit-4']['icon-color']
                 }}
               />
             }
-            color={clarityContent['simulated-reviews']['bg-color']}
-            image={clarityContent['simulated-reviews'].image}
+            color={clarityContent['benefit-4']['bg-color']}
+            image={clarityContent['benefit-4'].image}
             imageClassName="z-20 absolute  bottom-[-20px] lg:bottom-[-40px] left-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain -translate-x-1/2 shadow-lg"
           />
           <EnhancedPRDClarityCard
-            contentKey="enhanced-prd-clarity.press-release"
+            contentKey="benefits.benefit-5"
             soon
             icon={
               <FileText
                 className="size-4 lg:size-6"
                 strokeWidth={1}
-                style={{ color: clarityContent['press-release']['icon-color'] }}
+                style={{ color: clarityContent['benefit-5']['icon-color'] }}
               />
             }
-            color={clarityContent['press-release']['bg-color']}
+            color={clarityContent['benefit-5']['bg-color']}
           >
             <div className="z-20 absolute bottom-[-40px] left-1/2 -translate-x-1/2 lg:w-[clamp(100px,200px,50%)]  w-[clamp(100px,200px,70%)] ">
               <Image
-                src={clarityContent['press-release'].image}
+                src={clarityContent['benefit-5'].image}
                 alt="Press release"
                 width={368}
                 height={217}
                 className="absolute bottom-0 left-0 translate-x-[-20%] translate-y-0 shadow-lg"
               />
               <Image
-                src={clarityContent['press-release'].image}
+                src={clarityContent['benefit-5'].image}
                 alt="Press release"
                 width={368}
                 height={217}
@@ -129,17 +123,17 @@ export default function HomepageEnhancedPRDClarity() {
             </div>
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard
-            contentKey="enhanced-prd-clarity.demo-scripts"
+            contentKey="benefits.benefit-6"
             soon
             icon={
               <PlayCircle
                 className="size-4 lg:size-6"
                 strokeWidth={1}
-                style={{ color: clarityContent['demo-scripts']['icon-color'] }}
+                style={{ color: clarityContent['benefit-6']['icon-color'] }}
               />
             }
-            color={clarityContent['demo-scripts']['bg-color']}
-            image={clarityContent['demo-scripts'].image}
+            color={clarityContent['benefit-6']['bg-color']}
+            image={clarityContent['benefit-6'].image}
             imageClassName="z-20 absolute bottom-[-5%] left-1/2  h-auto w-[clamp(200px,250px,80%)] object-contain -translate-x-1/2 shadow-lg"
           />
         </div>

@@ -5,59 +5,99 @@
     "cta-text": "Start Reviewing for Free",
     "yc-badge": "Backed by Combinator"
   },
-  "ultimate-prd": {
+  "the-gist": {
     "title": "Great UX writing makes products feel effortless",
     "subtitle": "Every word on a button, tooltip, or error message shapes how users move through your product",
-    "chat-card": {
+    "primary-card": {
+      "id": "copy-review",
       "title": "Review copy in context",
       "image": "/marketing/homepage/chat-with-prdkit-ai.webp",
       "image-mobile": "/marketing/homepage/chat-with-prdkit-ai-mobile.webp"
     },
-    "prd-card": {
+    "secondary-card": {
+      "id": "actionable-feedback",
       "title": "Get actionable feedback",
       "image": "/marketing/homepage/bike-service-pro.webp",
       "image-mobile": "/marketing/homepage/bike-service-pro-mobile.webp"
     }
   },
-  "enhanced-prd-clarity": {
+  "challenges": {
+    "title": "Why teams struggle with UX writing",
+    "subtitle": "If your interface copy feels inconsistent or confusing, it's often not because the writers aren't good. It's because the process isn't built to support good writing.",
+    "challenge-1": {
+      "id": "late-copy-writing",
+      "title": "Copy is treated separately from design",
+      "description": "Microcopy is often added after design decisions are made. Chordio brings writing into the design process, so you can catch and fix wording issues early.",
+      "icon-color": "#51A1E1",
+      "bg-color": "#D9ECF2"
+    },
+    "challenge-2": {
+      "id": "no-guardrails",
+      "title": "Writers lack shared standards and guardrails",
+      "description": "Tone and terminology drift across products and features. Chordio applies consistent rules for language, tone, and voice across your product.",
+      "icon-color": "#319B6B",
+      "bg-color": "#E3F8E9"
+    },
+    "challenge-3": {
+      "id": "lost-context",
+      "title": "Context gets lost in disconnected documents",
+      "description": "Copy is reviewed in docs or spreadsheets, not inside the design. Chordio reviews words where they appear — inside Figma frames or live web pages.",
+      "icon-color": "#7A4EA1",
+      "bg-color": "#EDE9F0"
+    },
+    "challenge-4": {
+      "id": "scaling-governance",
+      "title": "Varying UX writing proficiency across contributors",
+      "description": "As teams grow, it's hard to maintain consistency and accessibility across every message. Chordio automates checks for clarity, tone, and inclusivity so nothing slips through.",
+      "icon-color": "#E1C151",
+      "bg-color": "#F3ECD1"
+    }
+  },
+  "benefits": {
     "title": "Check your copy against proven UX writing principles",
     "subtitle": "Chordio checks your designs against proven UX writing principles, helping you spot unclear phrasing, tone mismatches, and moments that break user flow.",
-    "wireframes": {
+    "benefit-1": {
+      "id": "clarity",
       "title": "Clarity",
       "description": "Write like you speak. Users shouldn't need to think twice. Catch phrases like 'Re-compute settings' that leave users unsure what happens next.",
       "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
       "icon-color": "#51A1E1",
       "bg-color": "#D1EDF3"
     },
-    "user-flows": {
+    "benefit-2": {
+      "id": "conciseness",
       "title": "Conciseness",
       "description": "Keep it short. Every word should earn its place. Identify long tooltips or help text that explain more than they need to.",
       "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     },
-    "social-posts": {
+    "benefit-3": {
+      "id": "consistency",
       "title": "Consistency",
       "description": "Use the same terms and tone across screens. Spot when 'Delete' on one screen becomes 'Remove' on another — users hesitate.",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
     },
-    "simulated-reviews": {
+    "benefit-4": {
+      "id": "empathy",
       "title": "Empathy",
       "description": "Anticipate confusion. Offer guidance, not blame. Transform 'You entered the wrong code' into 'That code didn't work. Try again.'",
       "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
       "icon-color": "#22C397",
       "bg-color": "#C4F3E6"
     },
-    "press-release": {
+    "benefit-5": {
+      "id": "action-orientation",
       "title": "Action Orientation",
       "description": "Help users know what to do next. Replace vague buttons like 'Proceed' with clear ones like 'Save and continue'.",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
       "icon-color": "#ED5F5F",
       "bg-color": "#FCE4E4"
     },
-    "demo-scripts": {
+    "benefit-6": {
+      "id": "accessibility",
       "title": "Accessibility",
       "description": "Use language that everyone can understand. Avoid overly complex instructions or insider jargon that exclude users.",
       "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
@@ -65,63 +105,97 @@
       "bg-color": "#D6F5DF"
     }
   },
-  "prd-in-workflow": {
+  "how-it-works": {
     "title": "Review copy where it lives",
     "subtitle": "Works directly in your design and development workflow",
-    "live-prototyping": {
+    "integration-1": {
+      "id": "figma-integration",
       "title": "Review in Figma",
       "subtitle": "Design integration",
       "description": "Select any frame in Figma and get instant UX writing feedback. See which principles pass, which fail, and what to improve."
     },
-    "share-with-team": {
+    "integration-2": {
+      "id": "browser-extension",
       "title": "Review live web pages",
       "subtitle": "Browser extension",
       "description": "Open any web page and review the copy in context. Perfect for QA processes and ongoing content audits."
     }
   },
-  "spec-features": {
-    "title": "Why teams struggle with UX writing",
-    "subtitle": "If your interface copy feels inconsistent or confusing, it's often not because the writers aren't good. It's because the process isn't built to support good writing.",
-    "automated-context": {
-      "title": "Copy written too late",
-      "description": "Microcopy is often added after design decisions are made. Chordio brings writing into the design process, so you can catch and fix wording issues early.",
+  "features": {
+    "title": "Built for design teams",
+    "subtitle": "Chordio integrates seamlessly into your workflow, providing instant feedback without disrupting your creative process.",
+    "feature-1": {
+      "id": "design-context",
+      "title": "In-context reviews",
+      "description": "Review copy directly inside your designs and live products. No copying text into separate tools or losing visual context.",
       "image": "/marketing/homepage/automated-context-gathering.webp",
       "icon-color": "#51A1E1",
       "bg-color": "#D9ECF2"
     },
-    "product-screen-analysis": {
-      "title": "No shared guardrails",
-      "description": "Tone and terminology drift across products and features. Chordio applies consistent rules for language, tone, and voice across your product.",
+    "feature-2": {
+      "id": "customizable-rules",
+      "title": "Customizable guidelines",
+      "description": "Define your brand voice, terminology, and style rules. Chordio learns your standards and applies them consistently across all reviews.",
       "image": "/marketing/homepage/product-screen-analysis.webp",
       "icon-color": "#319B6B",
       "bg-color": "#E3F8E9"
     },
-    "knowledge-hub": {
-      "title": "Context gets lost",
-      "description": "Copy is reviewed in docs or spreadsheets, not inside the design. Chordio reviews words where they appear — inside Figma frames or live web pages.",
+    "feature-3": {
+      "id": "team-collaboration",
+      "title": "Team collaboration",
+      "description": "Share reviews, track changes, and build a shared understanding of good UX writing across your entire product team.",
       "image": "/marketing/homepage/knowledge-hub.webp",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     }
   },
   "works-where": {
-    "title": "Available in your workspace",
-    "subtitle": "Use Chordio wherever you design and build. In Figma, in the browser, or on the web.",
-    "slack": {
-      "title": "Figma",
-      "description": "Add Chordio to Figma for seamless design review integration",
-      "bg-color": "#F6E7A5"
+    "title": "Available where you work",
+    "subtitle": "",
+    "platform-1": {
+      "id": "figma-plugin",
+      "title": "Review any Figma Layer",
+      "description": "See how your design holds up for usability, accessibility, copy, and more.",
+      "cta-text": "Install Figma Plugin",
+      "cta-url": "https://www.figma.com/community/plugin/1470337876493896011/chordio-ai-design-review-copilot",
+      "icon": "figma"
     },
-    "teams": {
-      "title": "Browser",
-      "description": "Review live web pages with the browser extension",
-      "bg-color": "#E7DDF4"
+    "platform-2": {
+      "id": "browser-extension",
+      "title": "Review any web page",
+      "description": "Get early usability feedback, copy suggestions, and initial build checks on live pages.",
+      "cta-text": "Install Chrome Extension",
+      "cta-url": "https://chromewebstore.google.com/detail/chordio-capture/memkckhiceghbhlleibnojnkkgjgcgkk",
+      "icon": "chrome"
+    }
+  },
+  "faq": {
+    "title": "Common questions",
+    "subtitle": "Learn how Chordio helps teams write better UX copy",
+    "question-1": {
+      "id": "how-it-works",
+      "question": "How does Chordio review my copy?",
+      "answer": "Chordio analyzes your interface copy against proven UX writing principles like clarity, conciseness, and consistency. It highlights issues and suggests improvements directly in context."
     },
-    "web": {
-      "title": "Web app",
-      "description": "Access Chordio from any browser, anywhere",
-      "bg-color": "#C8F5E9",
-      "icon-color": "#319B6B"
+    "question-2": {
+      "id": "design-tools",
+      "question": "Does it work with my design tools?",
+      "answer": "Yes. Chordio integrates with Figma and works as a browser extension for reviewing live websites. Review copy wherever it lives, without context switching."
+    },
+    "question-3": {
+      "id": "team-standards",
+      "question": "Can I customize the writing standards?",
+      "answer": "Absolutely. Define your brand voice, approved terminology, and style guidelines. Chordio applies your rules consistently across all reviews."
+    },
+    "question-4": {
+      "id": "team-access",
+      "question": "Can my entire team use Chordio?",
+      "answer": "Yes. Chordio is designed for teams. Designers, writers, and product managers can all review copy, share feedback, and maintain consistent standards."
+    },
+    "question-5": {
+      "id": "getting-started",
+      "question": "How quickly can I start using it?",
+      "answer": "Install the Figma plugin or browser extension and start reviewing in minutes. No training required—Chordio's feedback is clear and actionable from day one."
     }
   },
   "secondary-cta": {

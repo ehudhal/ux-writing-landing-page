@@ -14,7 +14,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
   const isMobile = useIsMobile()
   const isDesktop = !isMobile && !isTablet
   const contentHomepage = useHomepageContent()
-  const specFeatures = contentHomepage['spec-features']
+  const specFeatures = contentHomepage['features']
   return (
     <motion.section
       className="bg-white py-24 lg:py-32 relative "
@@ -27,27 +27,24 @@ export default function HomepageSpecFeaturesForExistingProduct() {
       <div className="lg:max-w-[1200px] max-w-[95%] lg:px-8  mx-auto w-full items-center flex flex-col gap-6 lg:gap-12 relative px-4 ">
         <div className="flex flex-col items-center gap-4 mb-4">
           <h2 className="text-2xl lg:text-[42px] font-serif font-light text-center lg:max-w-[800px]">
-            <Content contentKey="spec-features.title" />
+            <Content contentKey="features.title" />
           </h2>
-          <p className="text-center text-base lg:text-xl font-light">
-            <Content contentKey="spec-features.subtitle" />
-          </p>
         </div>
         <div className="flex flex-col gap-4 w-full">
           <div className="  gap-4 grid grid-cols-1 lg:grid-cols-2 justify-items-center ">
             <SpecFeatureCard
-              contentKey="spec-features.automated-context"
+              contentKey="features.feature-1"
               icon={
                 <Globe
                   className="size-4 lg:size-6"
                   strokeWidth={1}
-                  style={{ color: specFeatures['automated-context']['icon-color'] }}
+                  style={{ color: specFeatures['feature-1']['icon-color'] }}
                 />
               }
-              bgColor={specFeatures['automated-context']['bg-color']}
+              bgColor={specFeatures['feature-1']['bg-color']}
             >
               <Image
-                src={specFeatures['automated-context'].image}
+                src={specFeatures['feature-1'].image}
                 alt="Automated Context Gathering"
                 width={1588}
                 height={993}
@@ -55,18 +52,18 @@ export default function HomepageSpecFeaturesForExistingProduct() {
               />
             </SpecFeatureCard>
             <SpecFeatureCard
-              contentKey="spec-features.product-screen-analysis"
+              contentKey="features.feature-2"
               icon={
                 <Globe
                   className="size-4 lg:size-6"
                   strokeWidth={1}
-                  style={{ color: specFeatures['product-screen-analysis']['icon-color'] }}
+                  style={{ color: specFeatures['feature-2']['icon-color'] }}
                 />
               }
-              bgColor={specFeatures['product-screen-analysis']['bg-color']}
+              bgColor={specFeatures['feature-2']['bg-color']}
             >
               <Image
-                src={specFeatures['product-screen-analysis'].image}
+                src={specFeatures['feature-2'].image}
                 alt="Product Screen Analysis"
                 width={1708}
                 height={1113}
@@ -75,18 +72,18 @@ export default function HomepageSpecFeaturesForExistingProduct() {
             </SpecFeatureCard>
             {!isDesktop && (
               <SpecFeatureCard
-                contentKey="spec-features.knowledge-hub"
+                contentKey="features.feature-3"
                 icon={
                   <Notebook
                     className="size-4 lg:size-6"
                     strokeWidth={1}
-                    style={{ color: specFeatures['knowledge-hub']['icon-color'] }}
+                    style={{ color: specFeatures['feature-3']['icon-color'] }}
                   />
                 }
-                bgColor={specFeatures['knowledge-hub']['bg-color']}
+                bgColor={specFeatures['feature-3']['bg-color']}
               >
                 <Image
-                  src={specFeatures['knowledge-hub'].image}
+                  src={specFeatures['feature-3'].image}
                   alt="Knowledge Hub"
                   width={1708}
                   height={1113}
@@ -102,27 +99,27 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                   <div
                     className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min`}
                     style={{
-                      backgroundColor: specFeatures['knowledge-hub']['bg-color'],
-                      color: specFeatures['knowledge-hub']['icon-color']
+                      backgroundColor: specFeatures['feature-3']['bg-color'],
+                      color: specFeatures['feature-3']['icon-color']
                     }}
                   >
                     <Notebook className="size-6" strokeWidth={1} />
                   </div>
                   <h3 className="text-[22px] lg:text-3xl font-serif font-light">
                     <Content
-                      contentKey="spec-features.knowledge-hub.title"
-                     
+                      contentKey="features.feature-3.title"
+
                     />
                   </h3>
                 </div>
                 <p className="max-w-[400px]">
                   <Content
-                    contentKey="spec-features.knowledge-hub.description"
-                   
+                    contentKey="features.feature-3.description"
+
                   />
                 </p>
                 <Image
-                  src={specFeatures['knowledge-hub'].image}
+                  src={specFeatures['feature-3'].image}
                   alt="Knowledge Hub"
                   width={1708}
                   height={1113}
@@ -141,7 +138,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
                     cy="286.405"
                     rx="286.405"
                     ry="286.405"
-                    fill={specFeatures['knowledge-hub']['bg-color']}
+                    fill={specFeatures['feature-3']['bg-color']}
                   />
                 </svg>
               </div>
