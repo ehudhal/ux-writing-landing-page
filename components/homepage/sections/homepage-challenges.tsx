@@ -2,9 +2,9 @@
 import Content from '@/content/content'
 import { useHomepageContent } from '@/content/content-origin-context'
 import { fadeInUpVariants } from '../animations'
+import LucideIcon from '@/components/ui/lucide-icon'
 
 import { motion } from 'framer-motion'
-import { AlertCircle, Clock, FileQuestion } from 'lucide-react'
 import { defaultTransition } from '../animations'
 
 export default function HomepageChallenges() {
@@ -27,20 +27,18 @@ export default function HomepageChallenges() {
           </h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {challengesContent && Object.keys(challengesContent).filter(key => key.startsWith('challenge-')).map((key) => (
-            <ChallengeCard
-              key={key}
-              contentKey={`challenges.${key}`}
-              icon={
-                <AlertCircle
-                  className="size-4 lg:size-6"
-                  strokeWidth={1}
-                  style={{ color: '#ED5F5F' }}
-                />
-              }
-              color="#FCE4E4"
-            />
-          ))}
+          {challengesContent && Object.keys(challengesContent).filter(key => key.startsWith('challenge-')).map((key) => {
+            const challenge = challengesContent[key]
+            return (
+              <ChallengeCard
+                key={key}
+                contentKey={`challenges.${key}`}
+                iconName={challenge.icon || 'alert-circle'}
+                iconColor={challenge['icon-color']}
+                bgColor={challenge['bg-color']}
+              />
+            )
+          })}
         </div>
       </div>
     </motion.section>
@@ -49,11 +47,12 @@ export default function HomepageChallenges() {
 
 type ChallengeCardProps = {
   contentKey: string
-  icon: React.ReactNode
-  color: string
+  iconName: string
+  iconColor: string
+  bgColor: string
 }
 
-const ChallengeCard = ({ contentKey, icon, color }: ChallengeCardProps) => {
+const ChallengeCard = ({ contentKey, iconName, iconColor, bgColor }: ChallengeCardProps) => {
   return (
     <div className="bg-offwhite relative rounded-2xl p-4 lg:p-5 flex items-center justify-between gap-3 min-h-[80px]">
       <h3 className="text-sm lg:text-base font-serif font-light">
@@ -61,9 +60,14 @@ const ChallengeCard = ({ contentKey, icon, color }: ChallengeCardProps) => {
       </h3>
       <div
         className={`flex items-center gap-2 rounded-full p-2 aspect-square min-w-min flex-shrink-0`}
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: bgColor }}
       >
-        {icon}
+        <LucideIcon
+          name={iconName}
+          className="size-4 lg:size-6"
+          strokeWidth={1}
+          style={{ color: iconColor }}
+        />
       </div>
     </div>
   )

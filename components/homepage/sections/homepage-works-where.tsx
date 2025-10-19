@@ -2,16 +2,15 @@
 import Content from '@/content/content'
 import { useHomepageContent } from '@/content/content-origin-context'
 import { IconSlack, IconFigma } from '@/components/ui/icons'
+import LucideIcon from '@/components/ui/lucide-icon'
 import { motion } from 'framer-motion'
-import { Globe, Chrome } from 'lucide-react'
 import { defaultTransition, fadeInUpVariants } from '../animations'
 import Link from 'next/link'
 
-const iconMap: Record<string, React.ReactNode> = {
+// Map for custom non-Lucide icons (like brand logos)
+const customIconMap: Record<string, React.ReactNode> = {
   slack: <IconSlack className="size-10" />,
   figma: <IconFigma className="size-10" />,
-  globe: <Globe className="size-10" strokeWidth={1} />,
-  chrome: <Chrome className="size-10" strokeWidth={1.5} />,
 }
 
 type PlatformCardProps = {
@@ -24,11 +23,16 @@ const PlatformCard = ({ contentKey, icon, ctaUrl }: PlatformCardProps) => {
   const isExternal = ctaUrl.startsWith('http')
   const ButtonWrapper = isExternal ? 'a' : Link
 
+  // Check if it's a custom icon, otherwise use Lucide
+  const iconElement = customIconMap[icon] || (
+    <LucideIcon name={icon} className="size-10" strokeWidth={1} />
+  )
+
   return (
     <div className="bg-white border border-offblack/10 rounded-2xl p-8 lg:p-12 flex flex-col gap-6">
       <div className="flex flex-col gap-2 items-center">
         <div className="bg-offwhite rounded-full p-6 aspect-square flex items-center justify-center w-min">
-          {iconMap[icon] || iconMap.globe}
+          {iconElement}
         </div>
       </div>
       <div className="flex flex-col gap-3 items-center flex-1">

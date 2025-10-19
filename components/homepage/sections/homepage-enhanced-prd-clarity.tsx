@@ -2,16 +2,9 @@
 import Content from '@/content/content'
 import { useHomepageContent } from '@/content/content-origin-context'
 import { fadeInUpVariants } from '../animations'
+import LucideIcon from '@/components/ui/lucide-icon'
 
 import { motion } from 'framer-motion'
-import {
-  FileText,
-  LayoutGrid,
-  PenTool,
-  PlayCircle,
-  Share2,
-  Users2
-} from 'lucide-react'
 import Image from 'next/image'
 import { defaultTransition } from '../animations'
 
@@ -40,70 +33,43 @@ export default function HomepageEnhancedPRDClarity() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <EnhancedPRDClarityCard
             contentKey="benefits.benefit-1"
-            icon={
-              <PenTool
-                className="size-4 lg:size-6"
-                strokeWidth={1}
-                style={{ color: clarityContent['benefit-1']['icon-color'] }}
-              />
-            }
-            color={clarityContent['benefit-1']['bg-color']}
+            iconName={clarityContent['benefit-1'].icon || 'pen-tool'}
+            iconColor={clarityContent['benefit-1']['icon-color']}
+            bgColor={clarityContent['benefit-1']['bg-color']}
             image={clarityContent['benefit-1'].image}
             imageClassName="z-20 absolute bottom-[-30px] lg:bottom-[-55px] left-1/2 h-auto w-[clamp(200px,280px,80%)] object-contain -translate-x-1/2 shadow-lg"
           />
           <EnhancedPRDClarityCard
             contentKey="benefits.benefit-2"
-            icon={
-              <LayoutGrid
-                className="size-4 lg:size-6"
-                strokeWidth={1}
-                style={{ color: clarityContent['benefit-2']['icon-color'] }}
-              />
-            }
-            color={clarityContent['benefit-2']['bg-color']}
+            iconName={clarityContent['benefit-2'].icon || 'layout-grid'}
+            iconColor={clarityContent['benefit-2']['icon-color']}
+            bgColor={clarityContent['benefit-2']['bg-color']}
             image={clarityContent['benefit-2'].image}
             imageClassName="z-20 absolute bottom-[-5px] left-1/2 -translate-x-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain  shadow-lg"
           />
           <EnhancedPRDClarityCard
             contentKey="benefits.benefit-3"
-            icon={
-              <Share2
-                className="size-4 lg:size-6"
-                strokeWidth={1}
-                style={{ color: clarityContent['benefit-3']['icon-color'] }}
-              />
-            }
-            color={clarityContent['benefit-3']['bg-color']}
+            iconName={clarityContent['benefit-3'].icon || 'share-2'}
+            iconColor={clarityContent['benefit-3']['icon-color']}
+            bgColor={clarityContent['benefit-3']['bg-color']}
             image={clarityContent['benefit-3'].image}
             imageClassName="z-20 absolute bottom-[-15%] left-1/2  h-auto w-[clamp(200px,230px,55%)] object-contain -translate-x-1/2 shadow-lg"
           />
           <EnhancedPRDClarityCard
             contentKey="benefits.benefit-4"
             soon
-            icon={
-              <Users2
-                className="size-4 lg:size-6"
-                strokeWidth={1}
-                style={{
-                  color: clarityContent['benefit-4']['icon-color']
-                }}
-              />
-            }
-            color={clarityContent['benefit-4']['bg-color']}
+            iconName={clarityContent['benefit-4'].icon || 'users-2'}
+            iconColor={clarityContent['benefit-4']['icon-color']}
+            bgColor={clarityContent['benefit-4']['bg-color']}
             image={clarityContent['benefit-4'].image}
             imageClassName="z-20 absolute  bottom-[-20px] lg:bottom-[-40px] left-1/2 h-auto w-[clamp(200px,300px,80%)] object-contain -translate-x-1/2 shadow-lg"
           />
           <EnhancedPRDClarityCard
             contentKey="benefits.benefit-5"
             soon
-            icon={
-              <FileText
-                className="size-4 lg:size-6"
-                strokeWidth={1}
-                style={{ color: clarityContent['benefit-5']['icon-color'] }}
-              />
-            }
-            color={clarityContent['benefit-5']['bg-color']}
+            iconName={clarityContent['benefit-5'].icon || 'file-text'}
+            iconColor={clarityContent['benefit-5']['icon-color']}
+            bgColor={clarityContent['benefit-5']['bg-color']}
           >
             <div className="z-20 absolute bottom-[-40px] left-1/2 -translate-x-1/2 lg:w-[clamp(100px,200px,50%)]  w-[clamp(100px,200px,70%)] ">
               <Image
@@ -125,14 +91,9 @@ export default function HomepageEnhancedPRDClarity() {
           <EnhancedPRDClarityCard
             contentKey="benefits.benefit-6"
             soon
-            icon={
-              <PlayCircle
-                className="size-4 lg:size-6"
-                strokeWidth={1}
-                style={{ color: clarityContent['benefit-6']['icon-color'] }}
-              />
-            }
-            color={clarityContent['benefit-6']['bg-color']}
+            iconName={clarityContent['benefit-6'].icon || 'play-circle'}
+            iconColor={clarityContent['benefit-6']['icon-color']}
+            bgColor={clarityContent['benefit-6']['bg-color']}
             image={clarityContent['benefit-6'].image}
             imageClassName="z-20 absolute bottom-[-5%] left-1/2  h-auto w-[clamp(200px,250px,80%)] object-contain -translate-x-1/2 shadow-lg"
           />
@@ -144,8 +105,9 @@ export default function HomepageEnhancedPRDClarity() {
 
 type EnhancedPRDClarityCardProps = {
   contentKey: string
-  icon: React.ReactNode
-  color: string
+  iconName: string
+  iconColor: string
+  bgColor: string
   image?: string
   imageClassName?: string
   children?: React.ReactNode
@@ -154,8 +116,9 @@ type EnhancedPRDClarityCardProps = {
 
 export const EnhancedPRDClarityCard = ({
   contentKey,
-  icon,
-  color,
+  iconName,
+  iconColor,
+  bgColor,
   image,
   imageClassName,
   children,
@@ -169,9 +132,14 @@ export const EnhancedPRDClarityCard = ({
         </h3>
         <div
           className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min`}
-          style={{ backgroundColor: color }}
+          style={{ backgroundColor: bgColor }}
         >
-          {icon}
+          <LucideIcon
+            name={iconName}
+            className="size-4 lg:size-6"
+            strokeWidth={1}
+            style={{ color: iconColor }}
+          />
         </div>
       </div>
       <p className="text-sm lg:text-base">
@@ -200,7 +168,7 @@ export const EnhancedPRDClarityCard = ({
         xmlns="http://www.w3.org/2000/svg"
         className={'absolute bottom-0 left-1/2 -translate-x-1/2 w-full'}
       >
-        <ellipse cx="184.001" cy="184.989" rx="184" ry="184.159" fill={color} />
+        <ellipse cx="184.001" cy="184.989" rx="184" ry="184.159" fill={bgColor} />
       </svg>
     </div>
   )

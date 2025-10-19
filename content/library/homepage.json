@@ -28,6 +28,7 @@
       "id": "scattered-context",
       "title": "Scattered context",
       "description": "Product requirements live in Slack threads, meeting notes, and Google Docs. Teams waste hours hunting for the latest decisions.",
+      "icon": "alert-circle",
       "icon-color": "#ED5F5F",
       "bg-color": "#FCE4E4"
     },
@@ -35,6 +36,7 @@
       "id": "inconsistent-quality",
       "title": "Inconsistent quality",
       "description": "Every PM has their own template. Some PRDs are comprehensive, others miss critical details, leading to misaligned teams.",
+      "icon": "file-question",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
     },
@@ -42,6 +44,7 @@
       "id": "time-consuming",
       "title": "Time-consuming documentation",
       "description": "PMs spend days writing PRDs instead of talking to customers. Documentation becomes a bottleneck, not an enabler.",
+      "icon": "clock",
       "icon-color": "#51A1E1",
       "bg-color": "#D9ECF2"
     }
@@ -54,6 +57,7 @@
       "title": "Wireframes",
       "description": "See how your product would look like with visual aids to fine-tune the design before committing resources",
       "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
+      "icon": "pen-tool",
       "icon-color": "#51A1E1",
       "bg-color": "#D1EDF3"
     },
@@ -62,6 +66,7 @@
       "title": "User flows",
       "description": "Create clear user flow diagrams that illustrate how users will navigate through your product",
       "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
+      "icon": "layout-grid",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     },
@@ -70,6 +75,7 @@
       "title": "Social posts",
       "description": "Create social media announcements to build anticipation for your product launch",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon": "share-2",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
     },
@@ -78,6 +84,7 @@
       "title": "Simulated reviews",
       "description": "Evaluate how well your product resonates with users using AI simulated product reviews based on your PRD",
       "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
+      "icon": "users-2",
       "icon-color": "#22C397",
       "bg-color": "#C4F3E6",
       "badge": "Soon"
@@ -87,6 +94,7 @@
       "title": "Press release",
       "description": "Create compelling future press releases that help align your team on the end vision",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon": "file-text",
       "icon-color": "#ED5F5F",
       "bg-color": "#FCE4E4",
       "badge": "Soon"
@@ -96,6 +104,7 @@
       "title": "Demo scripts",
       "description": "Generate detailed demo scripts that showcase your product's value proposition",
       "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
+      "icon": "play-circle",
       "icon-color": "#22C397",
       "bg-color": "#D6F5DF",
       "badge": "Soon"

@@ -28,6 +28,7 @@
       "id": "late-copy-writing",
       "title": "Copy is treated separately from design",
       "description": "Microcopy is often added after design decisions are made. Chordio brings writing into the design process, so you can catch and fix wording issues early.",
+      "icon": "circle-slash",
       "icon-color": "#51A1E1",
       "bg-color": "#D9ECF2"
     },
@@ -35,6 +36,7 @@
       "id": "no-guardrails",
       "title": "Writers lack shared standards and guardrails",
       "description": "Tone and terminology drift across products and features. Chordio applies consistent rules for language, tone, and voice across your product.",
+      "icon": "shield-off",
       "icon-color": "#319B6B",
       "bg-color": "#E3F8E9"
     },
@@ -42,6 +44,7 @@
       "id": "lost-context",
       "title": "Context gets lost in disconnected documents",
       "description": "Copy is reviewed in docs or spreadsheets, not inside the design. Chordio reviews words where they appear — inside Figma frames or live web pages.",
+      "icon": "file-x",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     },
@@ -49,6 +52,7 @@
       "id": "scaling-governance",
       "title": "Varying UX writing proficiency across contributors",
       "description": "As teams grow, it's hard to maintain consistency and accessibility across every message. Chordio automates checks for clarity, tone, and inclusivity so nothing slips through.",
+      "icon": "scaling",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
     }
@@ -61,6 +65,7 @@
       "title": "Clarity",
       "description": "Write like you speak. Users shouldn't need to think twice. Catch phrases like 'Re-compute settings' that leave users unsure what happens next.",
       "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
+      "icon": "eye",
       "icon-color": "#51A1E1",
       "bg-color": "#D1EDF3"
     },
@@ -69,6 +74,7 @@
       "title": "Conciseness",
       "description": "Keep it short. Every word should earn its place. Identify long tooltips or help text that explain more than they need to.",
       "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
+      "icon": "minimize-2",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     },
@@ -77,6 +83,7 @@
       "title": "Consistency",
       "description": "Use the same terms and tone across screens. Spot when 'Delete' on one screen becomes 'Remove' on another — users hesitate.",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon": "check-check",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
     },
@@ -85,6 +92,7 @@
       "title": "Empathy",
       "description": "Anticipate confusion. Offer guidance, not blame. Transform 'You entered the wrong code' into 'That code didn't work. Try again.'",
       "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
+      "icon": "heart",
       "icon-color": "#22C397",
       "bg-color": "#C4F3E6"
     },
@@ -93,6 +101,7 @@
       "title": "Action Orientation",
       "description": "Help users know what to do next. Replace vague buttons like 'Proceed' with clear ones like 'Save and continue'.",
       "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "icon": "move-right",
       "icon-color": "#ED5F5F",
       "bg-color": "#FCE4E4"
     },
@@ -101,6 +110,7 @@
       "title": "Accessibility",
       "description": "Use language that everyone can understand. Avoid overly complex instructions or insider jargon that exclude users.",
       "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
+      "icon": "accessibility",
       "icon-color": "#22C397",
       "bg-color": "#D6F5DF"
     }
