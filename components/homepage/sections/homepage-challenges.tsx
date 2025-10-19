@@ -13,7 +13,8 @@ export default function HomepageChallenges() {
 
   return (
     <motion.section
-      className="bg-white py-24 lg:py-32 relative"
+      className="py-24 lg:py-32 relative"
+      style={{ backgroundColor: '#FBF5DA' }}
       variants={fadeInUpVariants}
       initial="hidden"
       whileInView="visible"
@@ -47,8 +48,10 @@ type ChallengeCardProps = {
 
 const ChallengeCard = ({ contentKey }: ChallengeCardProps) => {
   return (
-    <div className="bg-offwhite relative rounded-2xl p-4 lg:p-5 flex items-center gap-3 min-h-[80px]">
-      <AlertCircle className="size-5 text-offblack flex-shrink-0" strokeWidth={1.5} />
+    <div className="bg-white relative rounded-2xl p-4 lg:p-5 flex items-center gap-3 min-h-[80px]">
+      <div className="rounded-full p-2 flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#F9CFB8' }}>
+        <AlertCircle className="size-5 text-offblack" strokeWidth={1.5} />
+      </div>
       <h3 className="text-base lg:text-lg font-serif font-light">
         <Content contentKey={`${contentKey}.title`} />
       </h3>
