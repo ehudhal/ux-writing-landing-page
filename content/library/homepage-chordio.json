@@ -64,7 +64,7 @@
       "id": "clarity",
       "title": "Clarity",
       "description": "Write like you speak. Users shouldn't need to think twice. Catch phrases like 'Re-compute settings' that leave users unsure what happens next.",
-      "image": "/marketing/homepage/enhanced-prd-wireframes.webp",
+      "image": "/marketing/homepage/benefit-clarity.png",
       "icon": "eye",
       "icon-color": "#51A1E1",
       "bg-color": "#D1EDF3"
@@ -73,7 +73,7 @@
       "id": "conciseness",
       "title": "Conciseness",
       "description": "Keep it short. Every word should earn its place. Identify long tooltips or help text that explain more than they need to.",
-      "image": "/marketing/homepage/enhanced-prd-user-flows.webp",
+      "image": "/marketing/homepage/benefit-conciseness.png",
       "icon": "minimize-2",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
@@ -82,7 +82,7 @@
       "id": "consistency",
       "title": "Consistency",
       "description": "Use the same terms and tone across screens. Spot when 'Delete' on one screen becomes 'Remove' on another — users hesitate.",
-      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "image": "/marketing/homepage/benefit-consistency.png",
       "icon": "check-check",
       "icon-color": "#E1C151",
       "bg-color": "#F3ECD1"
@@ -91,7 +91,7 @@
       "id": "empathy",
       "title": "Empathy",
       "description": "Anticipate confusion. Offer guidance, not blame. Transform 'You entered the wrong code' into 'That code didn't work. Try again.'",
-      "image": "/marketing/homepage/enhanced-prd-simulated-reviews.webp",
+      "image": "/marketing/homepage/benefit-empathy.png",
       "icon": "heart",
       "icon-color": "#22C397",
       "bg-color": "#C4F3E6"
@@ -99,8 +99,9 @@
     "benefit-5": {
       "id": "action-orientation",
       "title": "Action Orientation",
-      "description": "Help users know what to do next. Replace vague buttons like 'Proceed' with clear ones like 'Save and continue'.",
-      "image": "/marketing/homepage/enhanced-prd-press-release-01.webp",
+      "description": "Lead with action verbs that tell users what they can do. Turn passive labels into active invitations, whether it's a button CTA or marketing copy.",
+      "image": "/marketing/homepage/benefit-action-orientation.png",
+      "image2": "/marketing/homepage/benefit-action-orientation-2.png",
       "icon": "move-right",
       "icon-color": "#ED5F5F",
       "bg-color": "#FCE4E4"
@@ -109,7 +110,7 @@
       "id": "accessibility",
       "title": "Accessibility",
       "description": "Use language that everyone can understand. Avoid overly complex instructions or insider jargon that exclude users.",
-      "image": "/marketing/homepage/enhanced-prd-demo-briefs.webp",
+      "image": "/marketing/homepage/benefit-accessibility.png",
       "icon": "accessibility",
       "icon-color": "#22C397",
       "bg-color": "#D6F5DF"

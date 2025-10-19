@@ -77,14 +77,14 @@ export default function HomepageEnhancedPRDClarity() {
             <div className="z-20 absolute bottom-[-40px] left-1/2 -translate-x-1/2 lg:w-[clamp(100px,200px,50%)]  w-[clamp(100px,200px,70%)] ">
               <Image
                 src={clarityContent['benefit-5'].image}
-                alt="Press release"
+                alt="Action orientation example 1"
                 width={368}
                 height={217}
                 className="absolute bottom-0 left-0 translate-x-[-20%] translate-y-0 shadow-lg"
               />
               <Image
-                src={clarityContent['benefit-5'].image}
-                alt="Press release"
+                src={clarityContent['benefit-5'].image2}
+                alt="Action orientation example 2"
                 width={368}
                 height={217}
                 className="  translate-x-[25%] shadow-lg translate-y-[20%]"
