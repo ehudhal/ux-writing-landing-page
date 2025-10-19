@@ -19,7 +19,7 @@ export default function HomepageSecondaryCta() {
           <h2 className="text-3xl lg:text-[42px] font-serif font-light text-center max-w-[800px]">
             <Content contentKey="secondary-cta.title" />
           </h2>
-          <p className="text-center text-base lg:text-xl font-light">
+          <p className="text-center text-base lg:text-xl font-light max-w-[90%] lg:max-w-[700px]">
             <Content contentKey="secondary-cta.subtitle" />
           </p>
           <Button className="gradient-bg px-8 md:px-16 py-7  text-lg mt-8 text-offblack transition-all duration-300 ease-in-out hover:scale-[1.02] shadow-black/10 hover:shadow-lg active:scale-[0.98] active:shadow-none active:brightness-95">
