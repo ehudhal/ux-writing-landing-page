@@ -4,7 +4,6 @@ import HomepageHeader from '@/components/homepage/homepage-header'
 import HomepageChallenges from '@/components/homepage/sections/homepage-challenges'
 import HomepageEnhancedPRDClarity from '@/components/homepage/sections/homepage-enhanced-prd-clarity'
 import HomepageFAQ from '@/components/homepage/sections/homepage-faq'
-import HomepagePRDInWorkflow from '@/components/homepage/sections/homepage-prd-in-workflow'
 import HomepagePrivacy from '@/components/homepage/sections/homepage-privacy'
 import HomepageSecondaryCta from '@/components/homepage/sections/homepage-secondary-cta'
 import HomepageSpecFeaturesForExistingProduct from '@/components/homepage/sections/homepage-spec-features-for-existing-product'
@@ -21,10 +20,9 @@ export default function ChordioVariantPage() {
         <HomepageUltimatePRD />
         <HomepageChallenges />
         <HomepageEnhancedPRDClarity />
-        <HomepagePRDInWorkflow />
+        <HomepageWorksWhere />
         <HomepageSpecFeaturesForExistingProduct />
         <HomepagePrivacy />
-        <HomepageWorksWhere />
         <HomepageFAQ />
         <HomepageSecondaryCta />
         <HomepageFooter />

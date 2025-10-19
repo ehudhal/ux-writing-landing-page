@@ -1,7 +1,7 @@
 'use client'
 import Content from '@/content/content'
 import { useHomepageContent } from '@/content/content-origin-context'
-import { IconSlack, IconFigma } from '@/components/ui/icons'
+import { IconSlack } from '@/components/ui/icons'
 import LucideIcon from '@/components/ui/lucide-icon'
 import { motion } from 'framer-motion'
 import { defaultTransition, fadeInUpVariants } from '../animations'
@@ -10,8 +10,12 @@ import Link from 'next/link'
 // Map for custom non-Lucide icons (like brand logos)
 const customIconMap: Record<string, React.ReactNode> = {
   slack: <IconSlack className="size-10" />,
-  figma: <IconFigma className="size-10" />,
+  figma: <img src="/figma-icon.svg" alt="Figma" className="w-20 h-20" />,
+  chrome: <img src="/chrome-icon.svg" alt="Chrome" className="w-20 h-20" />,
 }
+
+// Icons that already have their own background circles in the SVG
+const iconsWithOwnBackground = ['figma', 'chrome']
 
 type PlatformCardProps = {
   contentKey: string
@@ -31,9 +35,15 @@ const PlatformCard = ({ contentKey, icon, ctaUrl }: PlatformCardProps) => {
   return (
     <div className="bg-white border border-offblack/10 rounded-2xl p-8 lg:p-12 flex flex-col gap-6">
       <div className="flex flex-col gap-2 items-center">
-        <div className="bg-offwhite rounded-full p-6 aspect-square flex items-center justify-center w-min">
-          {iconElement}
-        </div>
+        {iconsWithOwnBackground.includes(icon) ? (
+          <div className="flex items-center justify-center">
+            {iconElement}
+          </div>
+        ) : (
+          <div className="bg-offwhite rounded-full p-6 aspect-square flex items-center justify-center w-min">
+            {iconElement}
+          </div>
+        )}
       </div>
       <div className="flex flex-col gap-3 items-center flex-1">
         <h4 className="text-xl lg:text-2xl font-medium text-center">
@@ -62,7 +72,7 @@ export default function HomepageWorksWhere() {
 
   return (
     <motion.section
-      className="bg-offwhite pb-24 lg:pb-32 relative"
+      className="bg-offwhite py-24 lg:py-32 relative"
       variants={fadeInUpVariants}
       initial="hidden"
       whileInView="visible"

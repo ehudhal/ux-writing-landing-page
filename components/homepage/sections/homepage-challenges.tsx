@@ -2,7 +2,7 @@
 import Content from '@/content/content'
 import { useHomepageContent } from '@/content/content-origin-context'
 import { fadeInUpVariants } from '../animations'
-import LucideIcon from '@/components/ui/lucide-icon'
+import { AlertCircle } from 'lucide-react'
 
 import { motion } from 'framer-motion'
 import { defaultTransition } from '../animations'
@@ -26,16 +26,12 @@ export default function HomepageChallenges() {
             <Content contentKey="challenges.title" />
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="flex flex-col gap-4 max-w-xl mx-auto w-full">
           {challengesContent && Object.keys(challengesContent).filter(key => key.startsWith('challenge-')).map((key) => {
-            const challenge = challengesContent[key]
             return (
               <ChallengeCard
                 key={key}
                 contentKey={`challenges.${key}`}
-                iconName={challenge.icon || 'alert-circle'}
-                iconColor={challenge['icon-color']}
-                bgColor={challenge['bg-color']}
               />
             )
           })}
@@ -47,28 +43,15 @@ export default function HomepageChallenges() {
 
 type ChallengeCardProps = {
   contentKey: string
-  iconName: string
-  iconColor: string
-  bgColor: string
 }
 
-const ChallengeCard = ({ contentKey, iconName, iconColor, bgColor }: ChallengeCardProps) => {
+const ChallengeCard = ({ contentKey }: ChallengeCardProps) => {
   return (
-    <div className="bg-offwhite relative rounded-2xl p-4 lg:p-5 flex items-center justify-between gap-3 min-h-[80px]">
-      <h3 className="text-sm lg:text-base font-serif font-light">
+    <div className="bg-offwhite relative rounded-2xl p-4 lg:p-5 flex items-center gap-3 min-h-[80px]">
+      <AlertCircle className="size-5 text-offblack flex-shrink-0" strokeWidth={1.5} />
+      <h3 className="text-base lg:text-lg font-serif font-light">
         <Content contentKey={`${contentKey}.title`} />
       </h3>
-      <div
-        className={`flex items-center gap-2 rounded-full p-2 aspect-square min-w-min flex-shrink-0`}
-        style={{ backgroundColor: bgColor }}
-      >
-        <LucideIcon
-          name={iconName}
-          className="size-4 lg:size-6"
-          strokeWidth={1}
-          style={{ color: iconColor }}
-        />
-      </div>
     </div>
   )
 }

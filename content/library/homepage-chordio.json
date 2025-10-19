@@ -26,7 +26,7 @@
     "subtitle": "If your interface copy feels inconsistent or confusing, it's often not because the writers aren't good. It's because the process isn't built to support good writing.",
     "challenge-1": {
       "id": "late-copy-writing",
-      "title": "Copy is treated separately from design",
+      "title": "Microcopy is treated as an afterthought",
       "description": "Microcopy is often added after design decisions are made. Chordio brings writing into the design process, so you can catch and fix wording issues early.",
       "icon": "circle-slash",
       "icon-color": "#51A1E1",
@@ -42,7 +42,7 @@
     },
     "challenge-3": {
       "id": "lost-context",
-      "title": "Context gets lost in disconnected documents",
+      "title": "Copy reviews happen in spreadsheets, not designs",
       "description": "Copy is reviewed in docs or spreadsheets, not inside the design. Chordio reviews words where they appear — inside Figma frames or live web pages.",
       "icon": "file-x",
       "icon-color": "#7A4EA1",
