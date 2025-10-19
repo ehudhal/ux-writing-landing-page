@@ -50,11 +50,11 @@ const FAQItem = ({ contentKey }: FAQItemProps) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full text-left p-6 lg:p-8 flex items-center justify-between gap-4 hover:bg-offwhite/50 transition-colors"
       >
-        <h3 className="text-lg lg:text-xl font-medium">
+        <h3 className="text-lg lg:text-xl font-serif font-light">
           <Content contentKey={`${contentKey}.question`} />
         </h3>
         <ChevronDown
-          className={`size-5 lg:size-6 flex-shrink-0 transition-transform ${
+          className={`size-5 lg:size-6 flex-shrink-0 transition-transform text-offblack/40 ${
             isOpen ? 'rotate-180' : ''
           }`}
         />
