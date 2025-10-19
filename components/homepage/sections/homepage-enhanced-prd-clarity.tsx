@@ -29,6 +29,9 @@ export default function HomepageEnhancedPRDClarity() {
 
             />
           </h2>
+          <p className="text-base lg:text-lg text-center text-offblack/70 max-w-3xl">
+            <Content contentKey="benefits.subtitle" />
+          </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <EnhancedPRDClarityCard

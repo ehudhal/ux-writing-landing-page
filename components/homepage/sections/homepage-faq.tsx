@@ -14,7 +14,7 @@ export default function HomepageFAQ() {
 
   return (
     <motion.section
-      className="bg-offwhite py-24 lg:py-32 relative"
+      className="bg-offwhite pb-24 lg:pb-32 relative"
       variants={fadeInUpVariants}
       initial="hidden"
       whileInView="visible"
