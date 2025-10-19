@@ -11,6 +11,18 @@ import { useState } from 'react'
 
 export default function HomepageUltimatePRD() {
   const [highlightedElement, setHighlightedElement] = useState<string | null>(null)
+  const [acceptedCards, setAcceptedCards] = useState<Set<string>>(new Set())
+  const [toastMessage, setToastMessage] = useState<string | null>(null)
+
+  const handleAccept = (cardId: string, message: string) => {
+    setAcceptedCards(prev => new Set(prev).add(cardId))
+    setToastMessage(message)
+    setTimeout(() => setToastMessage(null), 3000)
+  }
+
+  const handleDismiss = (cardId: string) => {
+    setAcceptedCards(prev => new Set(prev).add(cardId))
+  }
 
   return (
     <motion.section
@@ -59,15 +71,15 @@ export default function HomepageUltimatePRD() {
                       <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
                       <span className="font-semibold text-gray-900">PhotoApp</span>
                     </div>
-                    <button
-                      className={`px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 ${
+                    <div
+                      className={`px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 cursor-default ${
                         highlightedElement === 'action-orientation'
                           ? 'ring-4 ring-yellow-400 ring-opacity-75 scale-105'
                           : ''
                       }`}
                     >
-                      Images page
-                    </button>
+                      {acceptedCards.has('action-orientation') ? 'View images' : 'Images page'}
+                    </div>
                   </div>
 
                   {/* Main content area */}
@@ -77,15 +89,15 @@ export default function HomepageUltimatePRD() {
                         <h3 className="text-lg font-semibold text-gray-900">Photo Quality Score</h3>
                         <span className="text-2xl font-bold text-blue-600">87</span>
                       </div>
-                      <button
-                        className={`w-full px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-all duration-300 ${
+                      <div
+                        className={`w-full px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-all duration-300 cursor-default text-center ${
                           highlightedElement === 'clarity'
                             ? 'ring-4 ring-yellow-400 ring-opacity-75 scale-105'
                             : ''
                         }`}
                       >
-                        Re-compute score
-                      </button>
+                        {acceptedCards.has('clarity') ? 'Recalculate score' : 'Re-compute score'}
+                      </div>
                     </div>
 
                     <div className="bg-gray-50 rounded-lg p-4">
@@ -103,7 +115,9 @@ export default function HomepageUltimatePRD() {
                             : ''
                         }`}
                       >
-                        <p className="text-sm text-red-700">You entered the wrong code</p>
+                        <p className="text-sm text-red-700">
+                          {acceptedCards.has('empathy') ? "That code didn't work. Try again." : 'You entered the wrong code'}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -111,7 +125,7 @@ export default function HomepageUltimatePRD() {
               </div>
 
             {/* Figma plugin panel on the right */}
-            <div className="w-full lg:w-[420px] bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col">
+            <div className="w-full lg:w-[420px] bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col relative">
               {/* Plugin header */}
               <div className="px-4 py-3 border-b border-gray-200 bg-gray-50 flex items-center gap-2">
                 <img src="/chordio.svg" alt="Chordio" className="w-5 h-5" />
@@ -120,31 +134,66 @@ export default function HomepageUltimatePRD() {
 
               {/* Scrollable review cards */}
               <div className="flex flex-col gap-4 p-4 overflow-y-auto max-h-[700px]">
-                <div className="transform hover:scale-[1.02] transition-transform duration-200">
-                  <ClarityCard
-                    onInspect={() => {
-                      setHighlightedElement('clarity')
-                      setTimeout(() => setHighlightedElement(null), 2000)
-                    }}
-                  />
-                </div>
-                <div className="transform hover:scale-[1.02] transition-transform duration-200">
-                  <EmpathyCard
-                    onInspect={() => {
-                      setHighlightedElement('empathy')
-                      setTimeout(() => setHighlightedElement(null), 2000)
-                    }}
-                  />
-                </div>
-                <div className="transform hover:scale-[1.02] transition-transform duration-200">
-                  <ActionOrientationCard
-                    onInspect={() => {
-                      setHighlightedElement('action-orientation')
-                      setTimeout(() => setHighlightedElement(null), 2000)
-                    }}
-                  />
-                </div>
+                {!acceptedCards.has('clarity') && (
+                  <div className="transform hover:scale-[1.02] transition-transform duration-200">
+                    <ClarityCard
+                      onInspect={() => {
+                        setHighlightedElement('clarity')
+                        setTimeout(() => setHighlightedElement(null), 2000)
+                      }}
+                      onAccept={() => handleAccept('clarity', 'Applied suggestion: "Recalculate score"')}
+                      onDismiss={() => handleDismiss('clarity')}
+                    />
+                  </div>
+                )}
+                {!acceptedCards.has('empathy') && (
+                  <div className="transform hover:scale-[1.02] transition-transform duration-200">
+                    <EmpathyCard
+                      onInspect={() => {
+                        setHighlightedElement('empathy')
+                        setTimeout(() => setHighlightedElement(null), 2000)
+                      }}
+                      onAccept={() => handleAccept('empathy', 'Applied suggestion: "That code didn\'t work. Try again."')}
+                      onDismiss={() => handleDismiss('empathy')}
+                    />
+                  </div>
+                )}
+                {!acceptedCards.has('action-orientation') && (
+                  <div className="transform hover:scale-[1.02] transition-transform duration-200">
+                    <ActionOrientationCard
+                      onInspect={() => {
+                        setHighlightedElement('action-orientation')
+                        setTimeout(() => setHighlightedElement(null), 2000)
+                      }}
+                      onAccept={() => handleAccept('action-orientation', 'Applied suggestion: "View images"')}
+                      onDismiss={() => handleDismiss('action-orientation')}
+                    />
+                  </div>
+                )}
+
+                {/* Empty state when all cards are dismissed/accepted */}
+                {acceptedCards.size === 3 && (
+                  <div className="flex flex-col items-center justify-center py-12 text-center">
+                    <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-3">
+                      <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h5 className="text-sm font-semibold text-gray-900 mb-1">All issues resolved!</h5>
+                    <p className="text-xs text-gray-500">Your design copy looks great.</p>
+                  </div>
+                )}
               </div>
+
+              {/* Toast notification */}
+              {toastMessage && (
+                <div className="absolute bottom-4 left-4 right-4 bg-emerald-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-in slide-in-from-bottom duration-300">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm flex-1">{toastMessage}</span>
+                </div>
+              )}
             </div>
             </div>
           </div>

@@ -6,13 +6,17 @@ type BenefitCardProps = {
   suggestion: string
   explanation: string
   onInspect?: () => void
+  onAccept?: () => void
+  onDismiss?: () => void
 }
 
 export const BenefitCard = ({
   issueFound,
   suggestion,
   explanation,
-  onInspect
+  onInspect,
+  onAccept,
+  onDismiss
 }: BenefitCardProps) => {
   return (
     <div className="w-[400px] h-[340px] bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
@@ -26,10 +30,16 @@ export const BenefitCard = ({
           Inspect
         </button>
         <div className="flex gap-2">
-          <button className="text-xs px-3 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors">
+          <button
+            onClick={onDismiss}
+            className="text-xs px-3 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors"
+          >
             Dismiss
           </button>
-          <button className="text-xs px-3 py-1.5 text-white bg-emerald-600 hover:bg-emerald-700 rounded transition-colors">
+          <button
+            onClick={onAccept}
+            className="text-xs px-3 py-1.5 text-white bg-emerald-600 hover:bg-emerald-700 rounded transition-colors"
+          >
             Accept
           </button>
         </div>
@@ -69,48 +79,64 @@ export const BenefitCard = ({
 }
 
 // Individual benefit cards with their specific content
-export const ClarityCard = ({ onInspect }: { onInspect?: () => void }) => (
+type CardProps = {
+  onInspect?: () => void
+  onAccept?: () => void
+  onDismiss?: () => void
+}
+
+export const ClarityCard = ({ onInspect, onAccept, onDismiss }: CardProps) => (
   <BenefitCard
     issueFound="Re-compute score"
     suggestion="Recalculate score"
     explanation='Users may not understand what "re-compute" means. Use simpler language.'
     onInspect={onInspect}
+    onAccept={onAccept}
+    onDismiss={onDismiss}
   />
 )
 
-export const ConcisenessCard = ({ onInspect }: { onInspect?: () => void }) => (
+export const ConcisenessCard = ({ onInspect, onAccept, onDismiss }: CardProps) => (
   <BenefitCard
     issueFound="We provide a comprehensive solution that enables you to effectively manage your tasks"
     suggestion="Manage your tasks, effortlessly"
     explanation="Roundabout marketing copy loses readers. Get to the value faster for better conversion."
     onInspect={onInspect}
+    onAccept={onAccept}
+    onDismiss={onDismiss}
   />
 )
 
-export const ConsistencyCard = ({ onInspect }: { onInspect?: () => void }) => (
+export const ConsistencyCard = ({ onInspect, onAccept, onDismiss }: CardProps) => (
   <BenefitCard
     issueFound="Colour settings"
     suggestion="Color settings"
     explanation="Your style guide requires US English spelling. Use 'color' not 'colour' for consistency."
     onInspect={onInspect}
+    onAccept={onAccept}
+    onDismiss={onDismiss}
   />
 )
 
-export const EmpathyCard = ({ onInspect }: { onInspect?: () => void }) => (
+export const EmpathyCard = ({ onInspect, onAccept, onDismiss }: CardProps) => (
   <BenefitCard
     issueFound="You entered the wrong code"
     suggestion="That code didn't work. Try again."
     explanation="Blame-free language reduces user frustration and encourages retry."
     onInspect={onInspect}
+    onAccept={onAccept}
+    onDismiss={onDismiss}
   />
 )
 
-export const ActionOrientationCard = ({ onInspect }: { onInspect?: () => void }) => (
+export const ActionOrientationCard = ({ onInspect, onAccept, onDismiss }: CardProps) => (
   <BenefitCard
     issueFound="Images page"
     suggestion="View images"
     explanation="Action-oriented CTAs with strong verbs drive engagement. Tell users what they'll do, not where they'll go."
     onInspect={onInspect}
+    onAccept={onAccept}
+    onDismiss={onDismiss}
   />
 )
 
