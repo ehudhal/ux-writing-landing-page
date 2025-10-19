@@ -33,25 +33,6 @@ export default function HomepageSpecFeaturesForExistingProduct() {
         <div className="flex flex-col gap-4 w-full">
           <div className="  gap-4 grid grid-cols-1 lg:grid-cols-2 justify-items-center ">
             <SpecFeatureCard
-              contentKey="features.feature-1"
-              icon={
-                <Globe
-                  className="size-4 lg:size-6"
-                  strokeWidth={1}
-                  style={{ color: specFeatures['feature-1']['icon-color'] }}
-                />
-              }
-              bgColor={specFeatures['feature-1']['bg-color']}
-            >
-              <Image
-                src={specFeatures['feature-1'].image}
-                alt="Automated Context Gathering"
-                width={1588}
-                height={993}
-                className="z-20 absolute bottom-[-5%] lg:bottom-[-15%] left-1/2 -translate-x-1/2 object-contain h-auto w-[clamp(200px,300px,80%)] lg:w-[clamp(200px,400px,80%)] shadow-lg"
-              />
-            </SpecFeatureCard>
-            <SpecFeatureCard
               contentKey="features.feature-2"
               icon={
                 <Globe

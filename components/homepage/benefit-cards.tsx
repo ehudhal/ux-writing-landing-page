@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search } from 'lucide-react'
+import { ScanSearch } from 'lucide-react'
 
 type BenefitCardProps = {
   issueFound: string
@@ -26,7 +26,7 @@ export const BenefitCard = ({
           onClick={onInspect}
           className="flex items-center gap-1.5 text-xs px-3 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors border border-gray-300"
         >
-          <Search className="w-3 h-3" />
+          <ScanSearch className="w-3 h-3" />
           Inspect
         </button>
         <div className="flex gap-2">
