@@ -57,7 +57,7 @@ const PlatformCard = ({ contentKey, icon, ctaUrl }: PlatformCardProps) => {
         <ButtonWrapper
           href={ctaUrl}
           {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-          className="inline-flex items-center justify-center px-6 py-3 bg-offblack text-white rounded-full font-medium text-base hover:bg-offblack/90 transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 bg-offblack text-white rounded-full font-medium text-base transition-all duration-300 ease-in-out hover:scale-[1.02] shadow-black/10 hover:shadow-lg active:scale-[0.98] active:shadow-none active:brightness-95 transform-gpu"
         >
           <Content contentKey={`${contentKey}.cta-text`} />
         </ButtonWrapper>

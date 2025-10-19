@@ -16,7 +16,7 @@ export default function SimpleHomeHero() {
         <p className="text-xl lg:text-2xl text-center text-gray-600">
           <Content contentKey="hero.subtitle" />
         </p>
-        <Button className="gradient-bg px-8 md:px-16 py-7 text-lg mt-8 text-offblack transition-all duration-300 ease-in-out hover:scale-[1.02] shadow-black/10 hover:shadow-lg active:scale-[0.98] active:shadow-none active:brightness-95">
+        <Button className="gradient-bg px-8 md:px-16 py-7 text-lg mt-8 text-offblack transition-all duration-300 ease-in-out hover:scale-[1.02] shadow-black/10 hover:shadow-lg active:scale-[0.98] active:shadow-none active:brightness-95 transform-gpu">
           <Content contentKey="hero.cta-text" />
         </Button>
       </div>
