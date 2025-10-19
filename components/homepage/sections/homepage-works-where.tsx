@@ -46,7 +46,7 @@ const PlatformCard = ({ contentKey, icon, ctaUrl }: PlatformCardProps) => {
         )}
       </div>
       <div className="flex flex-col gap-3 items-center flex-1">
-        <h4 className="text-xl lg:text-2xl font-medium text-center">
+        <h4 className="text-xl lg:text-2xl font-serif font-light text-center">
           <Content contentKey={`${contentKey}.title`} />
         </h4>
         <p className="text-base lg:text-lg text-center text-offblack/70 leading-relaxed">

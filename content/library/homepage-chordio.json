@@ -2,7 +2,7 @@
   "hero": {
     "title": "Review your interface copy like a UX writer would",
     "subtitle": "Make every word work for your users with AI-powered reviews for clarity, consistency, and tone.",
-    "cta-text": "Start Reviewing for Free",
+    "cta-text": "Start reviewing for free",
     "yc-badge": "Backed by Combinator"
   },
   "the-gist": {
@@ -164,9 +164,9 @@
     "subtitle": "",
     "platform-1": {
       "id": "figma-plugin",
-      "title": "Review any Figma Layer",
+      "title": "Review any Figma layer",
       "description": "See how your design holds up for usability, accessibility, copy, and more.",
-      "cta-text": "Install Figma Plugin",
+      "cta-text": "Install Figma plugin",
       "cta-url": "https://www.figma.com/community/plugin/1470337876493896011/chordio-ai-design-review-copilot",
       "icon": "figma"
     },
@@ -174,7 +174,7 @@
       "id": "browser-extension",
       "title": "Review any web page",
       "description": "Get early usability feedback, copy suggestions, and initial build checks on live pages.",
-      "cta-text": "Install Chrome Extension",
+      "cta-text": "Install Chrome extension",
       "cta-url": "https://chromewebstore.google.com/detail/chordio-capture/memkckhiceghbhlleibnojnkkgjgcgkk",
       "icon": "chrome"
     }
