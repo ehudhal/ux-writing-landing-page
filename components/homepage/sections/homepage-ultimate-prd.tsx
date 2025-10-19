@@ -1,17 +1,14 @@
 'use client'
 import Content from '@/content/content'
-import { useHomepageContent } from '@/content/content-origin-context'
-import { useIsMobile } from '@/lib/hooks/use-media-query'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { defaultTransition, fadeInUpVariants } from '../animations'
+import {
+  ClarityCard,
+  EmpathyCard,
+  ActionOrientationCard
+} from '@/components/homepage/benefit-cards'
 
 export default function HomepageUltimatePRD() {
-  const isMobile = useIsMobile()
-  const contentHomepage = useHomepageContent()
-  const primaryCard = contentHomepage['the-gist']['primary-card']
-  const secondaryCard = contentHomepage['the-gist']['secondary-card']
-
   return (
     <motion.section
       className="bg-offwhite py-24 lg:py-32 relative "
@@ -30,36 +27,48 @@ export default function HomepageUltimatePRD() {
             <Content contentKey="the-gist.subtitle" />
           </p>
         </div>
-        <div className=" bg-white rounded-2xl flex flex-col lg:flex-row gap-4 p-6 border-[#DEDEDB] border z-[20]">
-          <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
-            <h4 className="text-xl font-serif font-light">
-              <Content
-                contentKey="the-gist.primary-card.title"
+        <div className="bg-white rounded-2xl p-8 lg:p-12 border-[#DEDEDB] border z-[20] flex flex-col gap-8">
+          <h3 className="text-xl lg:text-2xl font-serif font-light text-center">
+            Add the Figma plugin to apply suggestions automatically
+          </h3>
 
-              />
-            </h4>
-            <Image
-              src={isMobile ? primaryCard['image-mobile'] : primaryCard.image}
-              alt={primaryCard.title}
-              className="w-full h-full object-cover rounded-2xl"
-              width={1106}
-              height={680}
-            />
+          <div className="flex items-center justify-center overflow-hidden">
+            <div className="relative w-full max-w-[1200px] h-[600px] mx-auto">
+              {/* Clarity card - back left */}
+              <div
+                className="absolute top-[80px] left-[50px] transform -rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300"
+                style={{ zIndex: 1 }}
+              >
+                <ClarityCard />
+              </div>
+
+              {/* Empathy card - center, slightly forward */}
+              <div
+                className="absolute top-[40px] left-[280px] transform rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300"
+                style={{ zIndex: 2 }}
+              >
+                <EmpathyCard />
+              </div>
+
+              {/* Action Orientation card - front right */}
+              <div
+                className="absolute top-[100px] left-[520px] transform -rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300"
+                style={{ zIndex: 3 }}
+              >
+                <ActionOrientationCard />
+              </div>
+            </div>
           </div>
-          <div className="flex flex-col justify-between gap-4 w-full lg:w-1/2">
-            <h4 className="text-xl font-serif font-light">
-              <Content
-                contentKey="the-gist.secondary-card.title"
 
-              />
-            </h4>
-            <Image
-              src={isMobile ? secondaryCard['image-mobile'] : secondaryCard.image}
-              alt={secondaryCard.title}
-              width={1106}
-              className="w-full h-full object-cover rounded-2xl"
-              height={680}
-            />
+          <div className="flex justify-center -mt-4">
+            <a
+              href="https://www.figma.com/community/plugin/1470337876493896011/chordio-ai-design-review-copilot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-offblack text-white rounded-full hover:bg-offblack/90 transition-colors font-medium text-base lg:text-lg"
+            >
+              Install the Figma plugin
+            </a>
           </div>
         </div>
       </div>
