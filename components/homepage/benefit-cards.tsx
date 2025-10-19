@@ -1,26 +1,38 @@
 import React from 'react'
+import { Search } from 'lucide-react'
 
 type BenefitCardProps = {
   issueFound: string
   suggestion: string
   explanation: string
+  onInspect?: () => void
 }
 
 export const BenefitCard = ({
   issueFound,
   suggestion,
-  explanation
+  explanation,
+  onInspect
 }: BenefitCardProps) => {
   return (
     <div className="w-[400px] h-[340px] bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
       {/* Action buttons */}
-      <div className="flex items-center justify-end gap-2 px-4 py-3 border-b border-gray-200 bg-gray-50 flex-shrink-0">
-        <button className="text-xs px-3 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors">
-          Dismiss
+      <div className="flex items-center justify-between gap-2 px-4 py-3 border-b border-gray-200 bg-gray-50 flex-shrink-0">
+        <button
+          onClick={onInspect}
+          className="flex items-center gap-1.5 text-xs px-3 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors border border-gray-300"
+        >
+          <Search className="w-3 h-3" />
+          Inspect
         </button>
-        <button className="text-xs px-3 py-1.5 text-white bg-emerald-600 hover:bg-emerald-700 rounded transition-colors">
-          Accept
-        </button>
+        <div className="flex gap-2">
+          <button className="text-xs px-3 py-1.5 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded transition-colors">
+            Dismiss
+          </button>
+          <button className="text-xs px-3 py-1.5 text-white bg-emerald-600 hover:bg-emerald-700 rounded transition-colors">
+            Accept
+          </button>
+        </div>
       </div>
 
       {/* Card content */}
@@ -57,43 +69,48 @@ export const BenefitCard = ({
 }
 
 // Individual benefit cards with their specific content
-export const ClarityCard = () => (
+export const ClarityCard = ({ onInspect }: { onInspect?: () => void }) => (
   <BenefitCard
     issueFound="Re-compute score"
     suggestion="Recalculate score"
     explanation='Users may not understand what "re-compute" means. Use simpler language.'
+    onInspect={onInspect}
   />
 )
 
-export const ConcisenessCard = () => (
+export const ConcisenessCard = ({ onInspect }: { onInspect?: () => void }) => (
   <BenefitCard
     issueFound="We provide a comprehensive solution that enables you to effectively manage your tasks"
     suggestion="Manage your tasks, effortlessly"
     explanation="Roundabout marketing copy loses readers. Get to the value faster for better conversion."
+    onInspect={onInspect}
   />
 )
 
-export const ConsistencyCard = () => (
+export const ConsistencyCard = ({ onInspect }: { onInspect?: () => void }) => (
   <BenefitCard
     issueFound="Colour settings"
     suggestion="Color settings"
     explanation="Your style guide requires US English spelling. Use 'color' not 'colour' for consistency."
+    onInspect={onInspect}
   />
 )
 
-export const EmpathyCard = () => (
+export const EmpathyCard = ({ onInspect }: { onInspect?: () => void }) => (
   <BenefitCard
     issueFound="You entered the wrong code"
     suggestion="That code didn't work. Try again."
     explanation="Blame-free language reduces user frustration and encourages retry."
+    onInspect={onInspect}
   />
 )
 
-export const ActionOrientationCard = () => (
+export const ActionOrientationCard = ({ onInspect }: { onInspect?: () => void }) => (
   <BenefitCard
     issueFound="Images page"
     suggestion="View images"
     explanation="Action-oriented CTAs with strong verbs drive engagement. Tell users what they'll do, not where they'll go."
+    onInspect={onInspect}
   />
 )
 

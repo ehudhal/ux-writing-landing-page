@@ -7,8 +7,11 @@ import {
   EmpathyCard,
   ActionOrientationCard
 } from '@/components/homepage/benefit-cards'
+import { useState } from 'react'
 
 export default function HomepageUltimatePRD() {
+  const [highlightedElement, setHighlightedElement] = useState<string | null>(null)
+
   return (
     <motion.section
       className="bg-offwhite py-24 lg:py-32 relative "
@@ -32,35 +35,121 @@ export default function HomepageUltimatePRD() {
             Add the Figma plugin to apply suggestions automatically
           </h3>
 
-          <div className="flex items-center justify-center overflow-hidden">
-            <div className="relative w-full max-w-[1200px] h-[600px] mx-auto">
-              {/* Clarity card - back left */}
-              <div
-                className="absolute top-[80px] left-[50px] transform -rotate-3 hover:rotate-0 hover:scale-105 transition-transform duration-300"
-                style={{ zIndex: 1 }}
-              >
-                <ClarityCard />
+          {/* Figma-style dark canvas background */}
+          <div className="bg-[#2C2C2C] rounded-xl p-8 lg:p-12 relative overflow-hidden">
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+              {/* Mock website frame with Figma-style selection on the left */}
+              <div className="flex-1 flex items-center justify-center p-6 lg:p-8 relative">
+                {/* Figma frame label */}
+                <div className="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded font-mono">
+                  Frame 1321319922
+                </div>
+
+                {/* Selected frame with blue border (Figma selection) */}
+                <div className="w-full max-w-[500px] bg-white rounded-lg shadow-2xl p-6 space-y-6 border-2 border-blue-500 relative">
+                  {/* Selection corners (Figma-style) */}
+                  <div className="absolute -top-1 -left-1 w-3 h-3 bg-white border-2 border-blue-500"></div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-white border-2 border-blue-500"></div>
+                  <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-white border-2 border-blue-500"></div>
+                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-white border-2 border-blue-500"></div>
+
+                  {/* Mock website header */}
+                  <div className="flex items-center justify-between pb-4 border-b border-gray-200">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"></div>
+                      <span className="font-semibold text-gray-900">PhotoApp</span>
+                    </div>
+                    <button
+                      className={`px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition-all duration-300 ${
+                        highlightedElement === 'action-orientation'
+                          ? 'ring-4 ring-yellow-400 ring-opacity-75 scale-105'
+                          : ''
+                      }`}
+                    >
+                      Images page
+                    </button>
+                  </div>
+
+                  {/* Main content area */}
+                  <div className="space-y-4">
+                    <div className="bg-gray-50 rounded-lg p-4 space-y-3">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-lg font-semibold text-gray-900">Photo Quality Score</h3>
+                        <span className="text-2xl font-bold text-blue-600">87</span>
+                      </div>
+                      <button
+                        className={`w-full px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-all duration-300 ${
+                          highlightedElement === 'clarity'
+                            ? 'ring-4 ring-yellow-400 ring-opacity-75 scale-105'
+                            : ''
+                        }`}
+                      >
+                        Re-compute score
+                      </button>
+                    </div>
+
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <h3 className="text-base font-semibold text-gray-900 mb-3">Enter Access Code</h3>
+                      <input
+                        type="text"
+                        placeholder="Enter code"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm mb-2"
+                        disabled
+                      />
+                      <div
+                        className={`bg-red-50 border border-red-200 rounded-lg p-3 transition-all duration-300 ${
+                          highlightedElement === 'empathy'
+                            ? 'ring-4 ring-yellow-400 ring-opacity-75 scale-105'
+                            : ''
+                        }`}
+                      >
+                        <p className="text-sm text-red-700">You entered the wrong code</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Empathy card - center, slightly forward */}
-              <div
-                className="absolute top-[40px] left-[280px] transform rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300"
-                style={{ zIndex: 2 }}
-              >
-                <EmpathyCard />
+            {/* Figma plugin panel on the right */}
+            <div className="w-full lg:w-[420px] bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col">
+              {/* Plugin header */}
+              <div className="px-4 py-3 border-b border-gray-200 bg-gray-50 flex items-center gap-2">
+                <img src="/chordio.svg" alt="Chordio" className="w-5 h-5" />
+                <h4 className="text-sm font-semibold text-gray-900">Chordio reviewer</h4>
               </div>
 
-              {/* Action Orientation card - front right */}
-              <div
-                className="absolute top-[100px] left-[520px] transform -rotate-2 hover:rotate-0 hover:scale-105 transition-transform duration-300"
-                style={{ zIndex: 3 }}
-              >
-                <ActionOrientationCard />
+              {/* Scrollable review cards */}
+              <div className="flex flex-col gap-4 p-4 overflow-y-auto max-h-[700px]">
+                <div className="transform hover:scale-[1.02] transition-transform duration-200">
+                  <ClarityCard
+                    onInspect={() => {
+                      setHighlightedElement('clarity')
+                      setTimeout(() => setHighlightedElement(null), 2000)
+                    }}
+                  />
+                </div>
+                <div className="transform hover:scale-[1.02] transition-transform duration-200">
+                  <EmpathyCard
+                    onInspect={() => {
+                      setHighlightedElement('empathy')
+                      setTimeout(() => setHighlightedElement(null), 2000)
+                    }}
+                  />
+                </div>
+                <div className="transform hover:scale-[1.02] transition-transform duration-200">
+                  <ActionOrientationCard
+                    onInspect={() => {
+                      setHighlightedElement('action-orientation')
+                      setTimeout(() => setHighlightedElement(null), 2000)
+                    }}
+                  />
+                </div>
               </div>
+            </div>
             </div>
           </div>
 
-          <div className="flex justify-center -mt-4">
+          <div className="flex justify-center">
             <a
               href="https://www.figma.com/community/plugin/1470337876493896011/chordio-ai-design-review-copilot"
               target="_blank"

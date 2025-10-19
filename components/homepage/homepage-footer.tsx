@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import PRDKitLogo from '../prdkit-logo'
+import Image from 'next/image'
 const links = [
   {
     label: 'Terms',
@@ -47,7 +47,7 @@ export default function HomepageFooter({
       <div className={`flex items-end py-8 justify-end bg-offblack px-16`}>
         <div className="mx-auto flex size-full flex-col items-center justify-between gap-4 md:py-6  md:h-min md:flex-row  md:justify-between md:gap-0">
           <div className="flex items-center gap-2">
-            <PRDKitLogo color="white" />
+            <Image src="/chordio-logo-full-white.svg" alt="Chordio" width={129} height={33} />
           </div>
           <div className="flex md:flex-row flex-col gap-4 md:gap-0 justify-center items-center text-xs lg:text-sm">
             <div className="flex gap-2 items-center">
