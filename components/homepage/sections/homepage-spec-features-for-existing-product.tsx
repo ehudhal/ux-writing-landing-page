@@ -3,16 +3,12 @@ import Content from '@/content/content'
 import { useHomepageContent } from '@/content/content-origin-context'
 import { fadeInUpVariants } from '../animations'
 
-import { useIsMobile, useIsTablet } from '@/lib/hooks/use-media-query'
 import { motion } from 'framer-motion'
 import { Globe, Notebook } from 'lucide-react'
 import Image from 'next/image'
 import { defaultTransition } from '../animations'
 
 export default function HomepageSpecFeaturesForExistingProduct() {
-  const isTablet = useIsTablet()
-  const isMobile = useIsMobile()
-  const isDesktop = !isMobile && !isTablet
   const contentHomepage = useHomepageContent()
   const specFeatures = contentHomepage['features']
   return (
@@ -31,7 +27,7 @@ export default function HomepageSpecFeaturesForExistingProduct() {
           </h2>
         </div>
         <div className="flex flex-col gap-4 w-full">
-          <div className="  gap-4 grid grid-cols-1 lg:grid-cols-2 justify-items-center ">
+          <div className="gap-4 grid grid-cols-1 lg:grid-cols-2 justify-items-center">
             <SpecFeatureCard
               contentKey="features.feature-2"
               icon={
@@ -45,86 +41,32 @@ export default function HomepageSpecFeaturesForExistingProduct() {
             >
               <Image
                 src={specFeatures['feature-2'].image}
-                alt="Product Screen Analysis"
+                alt="Customizable Guidelines"
                 width={1708}
                 height={1113}
-                className="z-20 absolute bottom-[-5%]  lg:bottom-[-15%] left-1/2 -translate-x-1/2 object-contain h-auto w-[clamp(200px,300px,80%)] lg:w-[clamp(200px,400px,80%)] shadow-lg"
+                className="z-20 absolute bottom-[-5%] lg:bottom-[-15%] left-1/2 -translate-x-1/2 object-contain h-auto w-[clamp(200px,300px,80%)] lg:w-[clamp(200px,400px,80%)] shadow-lg"
               />
             </SpecFeatureCard>
-            {!isDesktop && (
-              <SpecFeatureCard
-                contentKey="features.feature-3"
-                icon={
-                  <Notebook
-                    className="size-4 lg:size-6"
-                    strokeWidth={1}
-                    style={{ color: specFeatures['feature-3']['icon-color'] }}
-                  />
-                }
-                bgColor={specFeatures['feature-3']['bg-color']}
-              >
-                <Image
-                  src={specFeatures['feature-3'].image}
-                  alt="Knowledge Hub"
-                  width={1708}
-                  height={1113}
-                  className="z-20 absolute bottom-[-5%] lg:bottom-[-15%] left-1/2 -translate-x-1/2 object-contain h-auto w-[clamp(200px,300px,80%)] lg:w-[clamp(200px,400px,80%)] shadow-lg "
+            <SpecFeatureCard
+              contentKey="features.feature-3"
+              icon={
+                <Notebook
+                  className="size-4 lg:size-6"
+                  strokeWidth={1}
+                  style={{ color: specFeatures['feature-3']['icon-color'] }}
                 />
-              </SpecFeatureCard>
-            )}
+              }
+              bgColor={specFeatures['feature-3']['bg-color']}
+            >
+              <Image
+                src={specFeatures['feature-3'].image}
+                alt="Team Collaboration"
+                width={1708}
+                height={1113}
+                className="z-20 absolute bottom-[-5%] lg:bottom-[-15%] left-1/2 -translate-x-1/2 object-contain h-auto w-[clamp(200px,300px,80%)] lg:w-[clamp(200px,400px,80%)] shadow-lg"
+              />
+            </SpecFeatureCard>
           </div>
-          {isDesktop && (
-            <div>
-              <div className="bg-offwhite w-full relative rounded-2xl p-6 lg:p-8 flex flex-col gap-4 lg:min-h-[400px] min-h-[350px] overflow-clip">
-                <div className="flex items-start lg:items-center justify-start gap-4">
-                  <div
-                    className={`flex items-center gap-2 rounded-full p-3 aspect-square min-w-min`}
-                    style={{
-                      backgroundColor: specFeatures['feature-3']['bg-color'],
-                      color: specFeatures['feature-3']['icon-color']
-                    }}
-                  >
-                    <Notebook className="size-6" strokeWidth={1} />
-                  </div>
-                  <h3 className="text-[22px] lg:text-3xl font-serif font-light">
-                    <Content
-                      contentKey="features.feature-3.title"
-
-                    />
-                  </h3>
-                </div>
-                <p className="max-w-[400px]">
-                  <Content
-                    contentKey="features.feature-3.description"
-
-                  />
-                </p>
-                <Image
-                  src={specFeatures['feature-3'].image}
-                  alt="Knowledge Hub"
-                  width={1708}
-                  height={1113}
-                  className="z-20 absolute bottom-[-5%] lg:bottom-[-15%] right-[calc(286px+3rem)]  translate-x-1/2 lg:w-[40%] w-[30%] shadow-lg"
-                />
-                <svg
-                  width="572.81"
-                  height="572.81"
-                  viewBox="0 0 572.81 572.81"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={'absolute bottom-0 translate-y-1/2 right-12 '}
-                >
-                  <ellipse
-                    cx="286.405"
-                    cy="286.405"
-                    rx="286.405"
-                    ry="286.405"
-                    fill={specFeatures['feature-3']['bg-color']}
-                  />
-                </svg>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </motion.section>
