@@ -147,7 +147,7 @@
       "id": "customizable-rules",
       "title": "Customizable guidelines",
       "description": "Define your brand voice, terminology, and style rules. Chordio learns your standards and applies them consistently across all reviews.",
-      "image": "/UX writing customization.png",
+      "image": "/marketing/homepage/UX writing customization.png",
       "icon-color": "#319B6B",
       "bg-color": "#E3F8E9"
     },
@@ -155,7 +155,7 @@
       "id": "team-collaboration",
       "title": "Team collaboration",
       "description": "Share reviews, track changes, and build a shared understanding of good UX writing across your entire product team.",
-      "image": "/team-collaboration.png",
+      "image": "/marketing/homepage/team-collaboration.png",
       "icon-color": "#7A4EA1",
       "bg-color": "#EDE9F0"
     }

@@ -82,13 +82,15 @@ export default function HomepageEnhancedPRDClarity() {
                 height={217}
                 className="absolute bottom-0 left-0 translate-x-[-20%] translate-y-0 shadow-lg"
               />
-              <Image
-                src={clarityContent['benefit-5'].image2}
-                alt="Action orientation example 2"
-                width={368}
-                height={217}
-                className="  translate-x-[25%] shadow-lg translate-y-[20%]"
-              />
+              {clarityContent['benefit-5'].image2 && (
+                <Image
+                  src={clarityContent['benefit-5'].image2}
+                  alt="Action orientation example 2"
+                  width={368}
+                  height={217}
+                  className="  translate-x-[25%] shadow-lg translate-y-[20%]"
+                />
+              )}
             </div>
           </EnhancedPRDClarityCard>
           <EnhancedPRDClarityCard

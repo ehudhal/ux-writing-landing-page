@@ -10,8 +10,8 @@ import Link from 'next/link'
 // Map for custom non-Lucide icons (like brand logos)
 const customIconMap: Record<string, React.ReactNode> = {
   slack: <IconSlack className="size-10" />,
-  figma: <img src="/figma-icon.svg" alt="Figma" className="w-20 h-20" />,
-  chrome: <img src="/chrome-icon.svg" alt="Chrome" className="w-20 h-20" />,
+  figma: <img src="/marketing/homepage/figma-icon.svg" alt="Figma" className="w-20 h-20" />,
+  chrome: <img src="/marketing/homepage/chrome-icon.svg" alt="Chrome" className="w-20 h-20" />,
 }
 
 // Icons that already have their own background circles in the SVG

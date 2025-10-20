@@ -128,7 +128,7 @@ export default function HomepageUltimatePRD() {
             <div className="w-full lg:w-[420px] bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col relative">
               {/* Plugin header */}
               <div className="px-4 py-3 border-b border-gray-200 bg-gray-50 flex items-center gap-2">
-                <img src="/chordio.svg" alt="Chordio" className="w-5 h-5" />
+                <img src="/marketing/homepage/chordio.svg" alt="Chordio" className="w-5 h-5" />
                 <h4 className="text-sm font-semibold text-gray-900">Chordio reviewer</h4>
               </div>
 

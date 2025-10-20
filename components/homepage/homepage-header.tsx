@@ -21,7 +21,7 @@ function DesktopVersion() {
   return (
     <div className="hidden relative justify-between p-6  md:p-10 md:pb-4 lg:flex">
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/chordio.svg" alt="Chordio" width={32} height={32} />
+        <Image src="/marketing/homepage/chordio.svg" alt="Chordio" width={32} height={32} />
         <span className="text-xl font-light text-offblack">Chordio</span>
       </Link>
       <div className="flex items-center gap-8 xl:absolute xl:right-1/2 xl:translate-x-1/2 p-0 h-10">
@@ -67,7 +67,7 @@ function MobileVersion() {
   return (
     <div className="flex justify-between p-6 pb-4 md:p-10 lg:hidden">
       <Link href="/" className="flex items-center gap-2">
-        <Image src="/chordio.svg" alt="Chordio" width={32} height={32} className="w-8 h-8 md:w-10 md:h-10" />
+        <Image src="/marketing/homepage/chordio.svg" alt="Chordio" width={32} height={32} className="w-8 h-8 md:w-10 md:h-10" />
         <span className="font-light text-offblack text-lg sm:text-2xl">Chordio</span>
       </Link>
       <Button
@@ -88,7 +88,7 @@ function MobileVersion() {
         >
           <header className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/chordio.svg" alt="Chordio" width={40} height={40} className="w-10 h-10 md:w-12 md:h-12" />
+              <Image src="/marketing/homepage/chordio.svg" alt="Chordio" width={40} height={40} className="w-10 h-10 md:w-12 md:h-12" />
               <span className="font-light text-offblack text-lg sm:text-2xl">
                 Chordio
               </span>
